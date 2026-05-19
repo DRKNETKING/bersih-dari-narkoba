@@ -1,615 +1,1777 @@
+
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerakan Kampung Bersih Narkoba - Pondok Jati Selatan</title>
-    <!-- Menggunakan Tailwind CSS untuk Styling -->
+    <title>Edukasi Anti-Narkoba | Idul Adha 1447 H</title>
+    
+    <!-- Google Fonts & Tailwind CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .hero-bg {
-            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=2070&auto=format&fit=crop') center/cover;
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            50: '#f0fdf4', 100: '#dcfce7', 200: '#bbf7d0', 300: '#86efac',
+                            400: '#4ade80', 500: '#22c55e', 600: '#16a34a', 700: '#15803d',
+                            800: '#166534', 900: '#14532d', 950: '#052e16',
+                        },
+                        amber: {
+                            50: '#fffbeb', 100: '#fef3c7', 200: '#fde68a', 300: '#fcd34d',
+                            400: '#fbbf24', 500: '#f59e0b', 600: '#d97706', 700: '#b45309',
+                            800: '#92400e', 900: '#78350f', 950: '#451a03',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['Amiri', 'serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 4s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
         }
-        /* Hide scrollbar for clean UI but keep functionality */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #f1f1f1; }
-        ::-webkit-scrollbar-thumb { background: #16a34a; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #15803d; }
+    </script>
+    
+    <style>
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .dark .glass-effect {
+            background: rgba(15, 23, 42, 0.85);
+        }
+        .neon-border {
+            box-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
+        }
+        .dark .neon-border {
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .dark ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #10b981;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #059669;
+        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800 antialiased">
+<body class="font-sans antialiased text-slate-800 bg-slate-50 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
 
-    <!-- NAVBAR -->
-    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur shadow-sm transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16 items-center">
-                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                    <span class="font-bold text-xl text-gray-900 hidden sm:block">Pondok Jati Selatan</span>
+    <div id="loading-screen" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-slate-900 text-white transition-opacity duration-700">
+        <div class="relative flex items-center justify-center">
+            <!-- Islamic Geometric Outer Spinner -->
+            <div class="w-24 h-24 border-4 border-emerald-500 border-t-transparent rounded-full animate-spin"></div>
+            <!-- Inner Glowing Crest -->
+            <i class="fa-solid fa-mosque text-3xl text-amber-400 absolute animate-pulse"></i>
+        </div>
+        <h2 class="mt-6 text-2xl font-bold font-arabic tracking-wide text-emerald-400">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</h2>
+        <p class="mt-2 text-sm text-slate-400 font-medium animate-pulse">Memuat Portal Anti-Narkoba & Sistem Pengelolaan...</p>
+    </div>
+
+    <div class="fixed bottom-6 left-6 z-40 flex items-center gap-3 bg-white dark:bg-slate-900 shadow-xl border border-slate-200 dark:border-slate-800 rounded-full px-4 py-2 hover:scale-105 transition-transform">
+        <button id="btn-music" onclick="toggleInstrumental()" class="w-10 h-10 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center shadow-lg shadow-emerald-500/30 transition-all">
+            <i id="music-icon" class="fa-solid fa-play"></i>
+        </button>
+        <div class="text-xs">
+            <p class="font-semibold text-slate-700 dark:text-slate-300 leading-none">Instrumen Islami</p>
+            <p id="music-status" class="text-slate-400 dark:text-slate-500 mt-0.5">Muted</p>
+        </div>
+    </div>
+
+    <div class="fixed bottom-6 right-6 z-40">
+        <button onclick="toggleAdminPanel()" class="flex items-center gap-2 px-5 py-3 rounded-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold shadow-lg shadow-amber-500/30 transition-transform hover:scale-105">
+            <i class="fa-solid fa-gauge-high animate-spin-slow"></i>
+            <span>Admin Control Panel</span>
+        </button>
+    </div>
+
+    <header class="sticky top-0 z-30 w-full glass-effect border-b border-slate-200/50 dark:border-slate-800/50 transition-colors duration-300 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 to-amber-500 flex items-center justify-center text-white font-bold text-xl shadow-md">
+                    <i class="fa-solid fa-shield-halved"></i>
                 </div>
-                <div class="hidden md:flex space-x-6 text-sm font-semibold text-gray-600">
-                    <a href="#tentang" class="hover:text-green-600 transition">Tentang</a>
-                    <a href="#edukasi" class="hover:text-green-600 transition">Edukasi Data</a>
-                    <a href="#jadwal" class="hover:text-green-600 transition">Jadwal</a>
-                    <a href="#galeri" class="hover:text-green-600 transition">Galeri</a>
+                <div>
+                    <span class="block text-lg font-extrabold tracking-tight bg-gradient-to-r from-emerald-600 to-amber-500 bg-clip-text text-transparent">SAY NO TO DRUGS</span>
+                    <span class="block text-[10px] uppercase tracking-wider font-semibold text-slate-400 dark:text-slate-500 leading-none">Idul Adha 1447 H</span>
                 </div>
-                <div class="flex items-center space-x-3">
-                    <a href="#lapor" class="hidden sm:inline-block bg-red-600 text-white px-4 py-2 rounded-md text-sm font-bold hover:bg-red-700 transition">Lapor Darurat</a>
-                    <!-- Mobile menu button -->
-                    <button class="md:hidden text-gray-600 focus:outline-none">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                    </button>
-                </div>
+            </a>
+
+            <!-- Mobile menu button -->
+            <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex items-center gap-6">
+                <a href="#home" class="font-medium text-sm hover:text-emerald-500 transition">Home</a>
+                <a href="#tentang" class="font-medium text-sm hover:text-emerald-500 transition">Tentang Narkoba</a>
+                <a href="#ciri" class="font-medium text-sm hover:text-emerald-500 transition">Ciri Pengguna</a>
+                <a href="#lebaran" class="font-medium text-sm hover:text-emerald-500 transition">Bahaya Hari Raya</a>
+                <a href="#artikel" class="font-medium text-sm hover:text-emerald-500 transition">Artikel</a>
+                <a href="#bantuan" class="font-medium text-sm hover:text-emerald-500 transition">Lapor & Konsultasi</a>
+                <a href="#gallery" class="font-medium text-sm hover:text-emerald-500 transition">Campaign</a>
+                <a href="#kontak" class="font-medium text-sm hover:text-emerald-500 transition">Kontak</a>
+            </nav>
+
+            <div class="hidden md:flex items-center gap-4">
+                <!-- Theme toggle -->
+                <button onclick="toggleTheme()" class="p-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition" title="Toggle Theme">
+                    <i id="theme-icon" class="fa-solid fa-moon text-lg"></i>
+                </button>
+                <a href="#bantuan" class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition shadow-lg shadow-emerald-600/20">
+                    <i class="fa-solid fa-phone-volume mr-2"></i> Lapor Anonim
+                </a>
             </div>
         </div>
-    </nav>
 
-    <!-- 1️⃣ HERO SECTION -->
-    <header class="hero-bg min-h-screen flex items-center pt-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-green-400 font-bold tracking-widest uppercase text-sm mb-4">Gerakan Kampung Bersih Narkoba</h2>
-            <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
-                Pondok Jati Selatan <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-300">Bersatu Melawan Narkoba</span>
-            </h1>
-            <p class="mt-4 text-xl text-gray-300 max-w-3xl mx-auto font-light">
-                Edukasi &bull; Pencegahan &bull; Rehabilitasi &bull; Perlindungan Generasi Muda
-            </p>
-            <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#relawan" class="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition shadow-lg flex items-center justify-center gap-2">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-                    Daftar Relawan
-                </a>
-                <a href="#lapor" class="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition shadow-lg flex items-center justify-center gap-2">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
-                    Laporkan Sekarang
-                </a>
-                <a href="#jadwal" class="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg transition shadow-lg flex items-center justify-center gap-2">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                    Ikuti Sosialisasi
-                </a>
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-1 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+            <a href="#home" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg font-medium hover:bg-slate-100 dark:hover:bg-slate-800">Home</a>
+            <a href="#tentang" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg font-medium hover:bg-slate-100 dark:hover:bg-slate-800">Tentang Narkoba</a>
+            <a href="#ciri" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg font-medium hover:bg-slate-100 dark:hover:bg-slate-800">Ciri Pengguna</a>
+            <a href="#lebaran" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg font-medium hover:bg-slate-100 dark:hover:bg-slate-800">Bahaya Hari Raya</a>
+            <a href="#artikel" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg font-medium hover:bg-slate-100 dark:hover:bg-slate-800">Artikel</a>
+            <a href="#bantuan" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg font-medium hover:bg-slate-100 dark:hover:bg-slate-800">Lapor & Konsultasi</a>
+            <a href="#gallery" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg font-medium hover:bg-slate-100 dark:hover:bg-slate-800">Campaign</a>
+            <a href="#kontak" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg font-medium hover:bg-slate-100 dark:hover:bg-slate-800">Kontak</a>
+            <div class="pt-4 flex items-center justify-between border-t border-slate-200 dark:border-slate-800">
+                <button onclick="toggleTheme()" class="p-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition flex items-center gap-2">
+                    <i id="theme-icon-mob" class="fa-solid fa-moon"></i> <span>Ubah Tema</span>
+                </button>
+                <a href="#bantuan" onclick="toggleMobileMenu()" class="px-4 py-2 rounded-lg bg-emerald-600 text-white text-xs font-semibold">Lapor Anonim</a>
             </div>
         </div>
     </header>
 
-    <!-- 2️⃣ TENTANG PROGRAM -->
-    <section id="tentang" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
-                <div>
-                    <h2 class="text-3xl font-extrabold text-gray-900 mb-6 border-l-4 border-green-600 pl-4">Tentang Gerakan Anti Narkoba Pondok Jati Selatan</h2>
-                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
-                        Program ini adalah inisiatif mandiri warga untuk mencegah penyalahgunaan narkoba melalui edukasi, pengawasan lingkungan komunal, dan kerja sama aktif dengan aparat kepolisian serta lembaga terkait seperti <strong>Badan Narkotika Nasional (BNN)</strong>.
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-24">
+        
+        <!-- SECTION 1: HOME (HERO) -->
+        <section id="home" class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-emerald-950 via-slate-900 to-slate-950 text-white p-8 md:p-16 neon-border">
+            <!-- Decorative Background Patterns -->
+            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#10b981_1px,transparent_1px)] [background-size:16px_16px]"></div>
+            <div class="absolute -top-16 -right-16 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl"></div>
+            
+            <div class="relative z-10 grid md:grid-cols-12 gap-8 items-center">
+                <div class="md:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">
+                        <i class="fa-solid fa-star"></i> Tema Spesial Hari Raya Idul Adha 1447 H
+                    </div>
+                    
+                    <!-- Dynamic Welcome Banner Editable via Admin Panel -->
+                    <h1 id="banner-title" class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        Rayakan Hari Raya dengan Hati Bersih & Hidup Sehat Tanpa Narkoba!
+                    </h1>
+                    
+                    <p id="banner-quote" class="text-base md:text-lg text-slate-300 italic font-medium border-l-4 border-amber-500 pl-4">
+                        "Hari Raya Idul Adha 1447 H - Jauhi Narkoba, Dekatkan Diri Kepada Keluarga"
                     </p>
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 bg-green-100 p-3 rounded-full">
-                                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <a href="#tentang" class="px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-lg shadow-emerald-500/20 hover:scale-105 transition">
+                            <i class="fa-solid fa-shield-halved mr-2"></i> Pelajari Bahaya Narkoba
+                        </a>
+                        <a href="#ciri" class="px-6 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-sm border border-slate-700 hover:scale-105 transition">
+                            <i class="fa-solid fa-clipboard-question mr-2"></i> Cek Ciri Pengguna
+                        </a>
+                        <a href="#bantuan" class="px-6 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm shadow-lg shadow-amber-500/20 hover:scale-105 transition">
+                            <i class="fa-solid fa-headset mr-2"></i> Lapor & Konsultasi
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Live Countdown to Idul Adha 1447 H -->
+                <div class="md:col-span-5">
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8 backdrop-blur-md shadow-xl text-center space-y-6">
+                        <div>
+                            <span class="text-xs uppercase font-extrabold text-amber-400 tracking-widest block mb-1">Menuju Momentum Suci</span>
+                            <h3 class="text-xl font-bold font-arabic">Hari Raya Idul Adha 10 Dzulhijjah 1447 H</h3>
+                            <p class="text-xs text-slate-400 mt-1">(Rabu, 27 Mei 2026)</p>
+                        </div>
+
+                        <!-- Grid Countdown -->
+                        <div class="grid grid-cols-4 gap-2">
+                            <div class="bg-black/30 p-3 rounded-xl border border-white/5">
+                                <span id="cd-days" class="block text-2xl md:text-3xl font-extrabold text-emerald-400">00</span>
+                                <span class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">Hari</span>
                             </div>
-                            <div class="ml-4">
-                                <h3 class="text-xl font-bold text-gray-900">Visi Kami</h3>
-                                <p class="mt-1 text-gray-600">Mewujudkan lingkungan Pondok Jati Selatan yang aman, sehat, dan 100% bebas dari peredaran narkoba.</p>
+                            <div class="bg-black/30 p-3 rounded-xl border border-white/5">
+                                <span id="cd-hours" class="block text-2xl md:text-3xl font-extrabold text-emerald-400">00</span>
+                                <span class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">Jam</span>
+                            </div>
+                            <div class="bg-black/30 p-3 rounded-xl border border-white/5">
+                                <span id="cd-minutes" class="block text-2xl md:text-3xl font-extrabold text-emerald-400">00</span>
+                                <span class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">Menit</span>
+                            </div>
+                            <div class="bg-black/30 p-3 rounded-xl border border-white/5">
+                                <span id="cd-seconds" class="block text-2xl md:text-3xl font-extrabold text-emerald-400">00</span>
+                                <span class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">Detik</span>
                             </div>
                         </div>
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 bg-blue-100 p-3 rounded-full">
-                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+
+                        <div class="text-xs text-slate-400 bg-emerald-950/40 p-3 rounded-lg border border-emerald-500/20">
+                            <p>💡 Isi perayaan Hari Raya dengan silaturahmi berkah, hindari kumpul malam berisiko yang mengarah ke narkoba.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: TENTANG NARKOBA (DENGAN 6 VECTOR NARKOBA YANG DI-REVISI INDAH) -->
+        <section id="tentang" class="space-y-12">
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <span class="text-emerald-600 dark:text-emerald-400 font-extrabold text-xs uppercase tracking-widest block">Klasifikasi & Informasi</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold">Mengenal Lebih Dekat Bahaya Narkoba</h2>
+                <p class="text-slate-600 dark:text-slate-400">Narkoba adalah zat kimia yang dapat merusak sistem saraf, mempengaruhi mental, dan merenggut masa depan. Berikut adalah 6 jenis narkoba utama yang sering disalahgunakan:</p>
+            </div>
+
+            <!-- Grid 6 Drugs with Beautiful custom SVG graphics -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Drug 1: GANJA -->
+                <div class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 hover:-translate-y-2 transition duration-300 shadow-sm hover:shadow-xl hover:border-emerald-500/40">
+                    <div class="w-full h-44 rounded-xl bg-slate-100 dark:bg-slate-950 mb-6 flex items-center justify-center p-4 relative overflow-hidden">
+                        <!-- Custom SVG Vector Ganja -->
+                        <svg class="w-28 h-28 text-emerald-600 dark:text-emerald-500 drop-shadow-lg" viewBox="0 0 100 100" fill="currentColor">
+                            <!-- High quality stylized cannabis leaf vector representation -->
+                            <path d="M50,15 C52,25 54,35 50,45 C46,35 48,25 50,15 Z M25,40 C35,42 43,45 50,45 C43,45 35,48 25,40 Z M75,40 C65,42 57,45 50,45 C57,45 65,48 75,40 Z M32,25 C40,32 46,38 50,45 C46,38 40,32 32,25 Z M68,25 C60,32 54,38 50,45 C54,38 60,32 68,25 Z M22,60 C32,55 42,50 50,45 C42,50 32,55 22,60 Z M78,60 C68,55 58,50 50,45 C58,50 68,55 78,60 Z" />
+                            <circle cx="50" cy="45" r="4" class="fill-red-500" />
+                            <path d="M47 45 H53 M50 42 V48" stroke="white" stroke-width="0.8"/>
+                        </svg>
+                        <div class="absolute top-3 right-3 bg-red-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">KATEGORI I</div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-emerald-500 transition">1. Ganja (Cannabis)</h3>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Mengandung THC yang menyebabkan efek halusinasi, ketergantungan psikologis berat, dan memicu kecemasan ekstrim.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-[10px] bg-red-100 dark:bg-red-950/50 text-red-600 dark:text-red-400 px-2.5 py-1 rounded-full font-bold uppercase">Kerusakan Otak</span>
+                        <span class="text-[10px] bg-amber-100 dark:bg-amber-950/50 text-amber-600 dark:text-amber-400 px-2.5 py-1 rounded-full font-bold uppercase">Halusinasi</span>
+                    </div>
+                </div>
+
+                <!-- Drug 2: SABU-SABU -->
+                <div class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 hover:-translate-y-2 transition duration-300 shadow-sm hover:shadow-xl hover:border-emerald-500/40">
+                    <div class="w-full h-44 rounded-xl bg-slate-100 dark:bg-slate-950 mb-6 flex items-center justify-center p-4 relative overflow-hidden">
+                        <!-- Custom SVG Vector Crystals Meth -->
+                        <svg class="w-28 h-28 text-cyan-500 drop-shadow-lg" viewBox="0 0 100 100" fill="currentColor">
+                            <!-- Beautiful glowing crystal shards -->
+                            <polygon points="50,15 65,40 50,55 35,40" class="opacity-80"/>
+                            <polygon points="30,45 45,65 30,80 15,65" class="opacity-70"/>
+                            <polygon points="70,45 85,65 70,80 55,65" class="opacity-90 fill-cyan-400"/>
+                        </svg>
+                        <div class="absolute top-3 right-3 bg-red-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">STIMULAN</div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-emerald-500 transition">2. Sabu-Sabu (Metamfetamin)</h3>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Kristal stimulan yang memicu detak jantung ekstrim, paranoid parah, dan membuat penggunanya tidak tidur berhari-hari.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-[10px] bg-red-100 dark:bg-red-950/50 text-red-600 dark:text-red-400 px-2.5 py-1 rounded-full font-bold uppercase">Paranoid</span>
+                        <span class="text-[10px] bg-amber-100 dark:bg-amber-950/50 text-amber-600 dark:text-amber-400 px-2.5 py-1 rounded-full font-bold uppercase">Stroke Akut</span>
+                    </div>
+                </div>
+
+                <!-- Drug 3: EKSTASI -->
+                <div class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 hover:-translate-y-2 transition duration-300 shadow-sm hover:shadow-xl hover:border-emerald-500/40">
+                    <div class="w-full h-44 rounded-xl bg-slate-100 dark:bg-slate-950 mb-6 flex items-center justify-center p-4 relative overflow-hidden">
+                        <!-- Custom SVG Vector Ecstasy Pills -->
+                        <svg class="w-28 h-28 text-pink-500 drop-shadow-lg" viewBox="0 0 100 100" fill="currentColor">
+                            <!-- Custom smiley and warning pills -->
+                            <circle cx="35" cy="45" r="22" class="fill-pink-500" />
+                            <circle cx="65" cy="60" r="18" class="fill-purple-500" />
+                            <!-- Smile overlay for pink pill -->
+                            <circle cx="28" cy="40" r="3" fill="black"/>
+                            <circle cx="42" cy="40" r="3" fill="black"/>
+                            <path d="M28 50 Q35 56 42 50" stroke="black" stroke-width="3" fill="none"/>
+                            <!-- Hazard symbol overlay for purple pill -->
+                            <path d="M60 55 L70 65 M70 55 L60 65" stroke="white" stroke-width="3"/>
+                        </svg>
+                        <div class="absolute top-3 right-3 bg-red-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">HALUSINOGEN</div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-emerald-500 transition">3. Ekstasi (MDMA)</h3>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Pil berwarna-warni yang merusak zat serotonin di otak, menyebabkan dehidrasi parah dan kegagalan organ tubuh.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-[10px] bg-red-100 dark:bg-red-950/50 text-red-600 dark:text-red-400 px-2.5 py-1 rounded-full font-bold uppercase">Dehidrasi Ekstrim</span>
+                        <span class="text-[10px] bg-amber-100 dark:bg-amber-950/50 text-amber-600 dark:text-amber-400 px-2.5 py-1 rounded-full font-bold uppercase">Gila</span>
+                    </div>
+                </div>
+
+                <!-- Drug 4: HEROIN / PUTAU -->
+                <div class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 hover:-translate-y-2 transition duration-300 shadow-sm hover:shadow-xl hover:border-emerald-500/40">
+                    <div class="w-full h-44 rounded-xl bg-slate-100 dark:bg-slate-950 mb-6 flex items-center justify-center p-4 relative overflow-hidden">
+                        <!-- Custom SVG Vector Syringe and Droplet -->
+                        <svg class="w-28 h-28 text-orange-600 drop-shadow-lg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round">
+                            <!-- Syringe needle vector -->
+                            <line x1="20" y1="80" x2="60" y2="40" />
+                            <rect x="52" y="32" width="20" height="8" transform="rotate(-45 62 36)" fill="currentColor" />
+                            <line x1="68" y1="32" x2="85" y2="15" stroke-width="6"/>
+                            <!-- Liquid droplet -->
+                            <path d="M15 85 C15 85 10 90 15 95 C20 95 20 85 15 85 Z" fill="red" stroke="none" />
+                        </svg>
+                        <div class="absolute top-3 right-3 bg-red-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">DEPRESAN</div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-emerald-500 transition">4. Heroin (Putau)</h3>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Zat adiktif tingkat tinggi yang langsung menyerang sistem saraf pusat, memicu overdosis mematikan dan penyebaran HIV.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-[10px] bg-red-100 dark:bg-red-950/50 text-red-600 dark:text-red-400 px-2.5 py-1 rounded-full font-bold uppercase">Overdosis</span>
+                        <span class="text-[10px] bg-amber-100 dark:bg-amber-950/50 text-amber-600 dark:text-amber-400 px-2.5 py-1 rounded-full font-bold uppercase">HIV/AIDS</span>
+                    </div>
+                </div>
+
+                <!-- Drug 5: PIL PCC & OBAT KERAS -->
+                <div class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 hover:-translate-y-2 transition duration-300 shadow-sm hover:shadow-xl hover:border-emerald-500/40">
+                    <div class="w-full h-44 rounded-xl bg-slate-100 dark:bg-slate-950 mb-6 flex items-center justify-center p-4 relative overflow-hidden">
+                        <!-- Custom SVG Vector Splitting Pills -->
+                        <svg class="w-28 h-28 text-red-500 drop-shadow-lg" viewBox="0 0 100 100" fill="currentColor">
+                            <!-- Splitting Pill Design -->
+                            <g transform="rotate(30 50 50)">
+                                <path d="M30 40 H50 V60 H30 Z" fill="#ef4444"/>
+                                <path d="M50 40 H70 V60 H50 Z" fill="#f8fafc"/>
+                                <line x1="50" y1="38" x2="50" y2="62" stroke="black" stroke-width="2" />
+                            </g>
+                            <!-- Particles representation -->
+                            <circle cx="20" cy="30" r="3" fill="#ef4444" class="animate-ping"/>
+                            <circle cx="80" cy="70" r="3.5" fill="#ef4444"/>
+                        </svg>
+                        <div class="absolute top-3 right-3 bg-red-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">PSIKOTROPIKA</div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-emerald-500 transition">5. Pil PCC & Obat Keras</h3>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Campuran obat penenang dosis tinggi yang memicu kelumpuhan saraf seketika, kejang hebat, hingga kematian mendadak.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-[10px] bg-red-100 dark:bg-red-950/50 text-red-600 dark:text-red-400 px-2.5 py-1 rounded-full font-bold uppercase">Kelumpuhan</span>
+                        <span class="text-[10px] bg-amber-100 dark:bg-amber-950/50 text-amber-600 dark:text-amber-400 px-2.5 py-1 rounded-full font-bold uppercase">Kejang-kejang</span>
+                    </div>
+                </div>
+
+                <!-- Drug 6: INHALAN / LEM -->
+                <div class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 hover:-translate-y-2 transition duration-300 shadow-sm hover:shadow-xl hover:border-emerald-500/40">
+                    <div class="w-full h-44 rounded-xl bg-slate-100 dark:bg-slate-950 mb-6 flex items-center justify-center p-4 relative overflow-hidden">
+                        <!-- Custom SVG Aerosol & Glue Fumes -->
+                        <svg class="w-28 h-28 text-yellow-600 drop-shadow-lg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3">
+                            <!-- Aerosol Can Outline -->
+                            <rect x="35" y="35" width="20" height="45" rx="3" fill="#94a3b8" stroke="currentColor"/>
+                            <path d="M40 35 V28 H50 V35" fill="none"/>
+                            <!-- Spray mist path -->
+                            <path d="M45 23 C45 23 35 15 50 10 C65 5 70 20 55 18" stroke="#a855f7" stroke-width="4" stroke-linecap="round" class="animate-pulse" />
+                        </svg>
+                        <div class="absolute top-3 right-3 bg-red-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">INHALAN</div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-emerald-500 transition">6. Inhalan & Lem</h3>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Zat kimia uap gas yang merusak dinding sel otak secara permanen, membakar paru-paru, dan memicu henti jantung mendadak.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-[10px] bg-red-100 dark:bg-red-950/50 text-red-600 dark:text-red-400 px-2.5 py-1 rounded-full font-bold uppercase">Gagal Otak</span>
+                        <span class="text-[10px] bg-amber-100 dark:bg-amber-950/50 text-amber-600 dark:text-amber-400 px-2.5 py-1 rounded-full font-bold uppercase">Asfiksia</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Impacts grid -->
+            <div class="bg-gradient-to-tr from-slate-900 to-slate-800 text-white rounded-3xl p-8 md:p-12 shadow-xl border border-slate-700">
+                <h3 class="text-2xl font-extrabold mb-8 text-center bg-gradient-to-r from-emerald-400 to-amber-300 bg-clip-text text-transparent">Dampak Nyata Penyalahgunaan Narkoba Bagi Tubuh & Masa Depan</h3>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 text-center">
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10 hover:bg-emerald-550/10 transition">
+                        <i class="fa-solid fa-brain text-4xl text-emerald-400 mb-4 animate-float"></i>
+                        <h4 class="font-bold text-lg mb-2">Kerusakan Otak</h4>
+                        <p class="text-xs text-slate-400">Kerusakan jaringan sel saraf yang tidak dapat disembuhkan.</p>
+                    </div>
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10 hover:bg-emerald-550/10 transition">
+                        <i class="fa-solid fa-face-sad-tear text-4xl text-amber-400 mb-4 animate-float" style="animation-delay: 0.5s"></i>
+                        <h4 class="font-bold text-lg mb-2">Gangguan Mental</h4>
+                        <p class="text-xs text-slate-400">Depresi berat, skizofrenia, paranoid, dan cemas ekstrem.</p>
+                    </div>
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10 hover:bg-emerald-550/10 transition">
+                        <i class="fa-solid fa-chain text-4xl text-emerald-400 mb-4 animate-float" style="animation-delay: 1s"></i>
+                        <h4 class="font-bold text-lg mb-2">Kecanduan</h4>
+                        <p class="text-xs text-slate-400">Ketergantungan kronis yang memaksa terus menambah dosis.</p>
+                    </div>
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10 hover:bg-emerald-550/10 transition">
+                        <i class="fa-solid fa-people-roof text-4xl text-amber-400 mb-4 animate-float" style="animation-delay: 1.5s"></i>
+                        <h4 class="font-bold text-lg mb-2">Hancurnya Keluarga</h4>
+                        <p class="text-xs text-slate-400">Hilangnya rasa percaya, kekerasan domestik, hingga perceraian.</p>
+                    </div>
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10 hover:bg-emerald-550/10 transition">
+                        <i class="fa-solid fa-sack-xmark text-4xl text-emerald-400 mb-4 animate-float" style="animation-delay: 2s"></i>
+                        <h4 class="font-bold text-lg mb-2">Krisis Ekonomi</h4>
+                        <p class="text-xs text-slate-400">Harta habis terjual, jeratan hutang, hingga tindak kriminalitas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: CIRI PENGGUNA NARKOBA (DENGAN CHECKLIST INTERAKTIF DAN SLIDER) -->
+        <section id="ciri" class="space-y-12">
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <span class="text-emerald-600 dark:text-emerald-400 font-extrabold text-xs uppercase tracking-widest block">Kenali Sedini Mungkin</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold">Ciri-Ciri Pengguna Narkoba</h2>
+                <p class="text-slate-600 dark:text-slate-400">Bantu lindungi keluarga, teman, dan tetangga sekitar kita dengan mengenali perubahan tanda fisik maupun perilaku yang mencurigakan di bawah ini.</p>
+            </div>
+
+            <!-- Diagnosis tool layout -->
+            <div class="grid lg:grid-cols-12 gap-8">
+                <!-- Checklist column (8 cols) -->
+                <div class="lg:col-span-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 md:p-8 shadow-sm space-y-8">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-slate-100 dark:border-slate-800">
+                        <div>
+                            <h3 class="text-xl font-extrabold text-slate-900 dark:text-white">Alat Diagnosis Mandiri Edukatif</h3>
+                            <p class="text-xs text-slate-500 mt-1">Gunakan checklist di bawah ini untuk menilai tingkat kecemasan risiko lingkungan.</p>
+                        </div>
+                        <div class="bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 px-4 py-2 rounded-xl flex items-center gap-2">
+                            <span class="text-xs font-bold uppercase">Risiko Terdeteksi:</span>
+                            <span id="risk-badge" class="font-extrabold text-sm uppercase">Nihil</span>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Physical Checklist -->
+                        <div class="space-y-4">
+                            <h4 class="font-bold text-sm uppercase tracking-wider text-emerald-600 dark:text-emerald-400 flex items-center gap-2">
+                                <i class="fa-solid fa-user-doctor"></i> Ciri Fisik
+                            </h4>
+                            <div class="space-y-3">
+                                <label class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 cursor-pointer transition select-none">
+                                    <input type="checkbox" class="risk-checkbox mt-1 rounded text-emerald-600 focus:ring-emerald-500" value="1">
+                                    <span class="text-sm">Mata terlihat sangat merah & sayu</span>
+                                </label>
+                                <label class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 cursor-pointer transition select-none">
+                                    <input type="checkbox" class="risk-checkbox mt-1 rounded text-emerald-600 focus:ring-emerald-500" value="1">
+                                    <span class="text-sm">Berat badan turun drastis tanpa alasan</span>
+                                </label>
+                                <label class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 cursor-pointer transition select-none">
+                                    <input type="checkbox" class="risk-checkbox mt-1 rounded text-emerald-600 focus:ring-emerald-500" value="1">
+                                    <span class="text-sm">Sering mengantuk berat & lemas</span>
+                                </label>
+                                <label class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 cursor-pointer transition select-none">
+                                    <input type="checkbox" class="risk-checkbox mt-1 rounded text-emerald-600 focus:ring-emerald-500" value="2">
+                                    <span class="text-sm">Terdapat bekas tusukan jarum di lengan</span>
+                                </label>
+                                <label class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 cursor-pointer transition select-none">
+                                    <input type="checkbox" class="risk-checkbox mt-1 rounded text-emerald-600 focus:ring-emerald-500" value="1">
+                                    <span class="text-sm">Penampilan berantakan & tidak terawat</span>
+                                </label>
                             </div>
-                            <div class="ml-4">
-                                <h3 class="text-xl font-bold text-gray-900">Misi Pergerakan</h3>
-                                <ul class="mt-2 space-y-2 text-gray-600 list-disc list-inside">
-                                    <li>Edukasi intensif bagi remaja dan orang tua.</li>
-                                    <li>Penyelenggaraan sosialisasi rutin di balai warga.</li>
-                                    <li>Penyediaan sistem pelaporan anonim yang aman.</li>
-                                    <li>Pendampingan rehabilitasi bagi korban penyalahgunaan.</li>
+                        </div>
+
+                        <!-- Behavior Checklist -->
+                        <div class="space-y-4">
+                            <h4 class="font-bold text-sm uppercase tracking-wider text-amber-600 dark:text-amber-400 flex items-center gap-2">
+                                <i class="fa-solid fa-users-gear"></i> Ciri Perilaku
+                            </h4>
+                            <div class="space-y-3">
+                                <label class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 cursor-pointer transition select-none">
+                                    <input type="checkbox" class="risk-checkbox mt-1 rounded text-emerald-600 focus:ring-emerald-500" value="1">
+                                    <span class="text-sm">Sangat sensitif & mudah marah tersinggung</span>
+                                </label>
+                                <label class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 cursor-pointer transition select-none">
+                                    <input type="checkbox" class="risk-checkbox mt-1 rounded text-emerald-600 focus:ring-emerald-500" value="1">
+                                    <span class="text-sm">Menyendiri & menghindari interaksi keluarga</span>
+                                </label>
+                                <label class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 cursor-pointer transition select-none">
+                                    <input type="checkbox" class="risk-checkbox mt-1 rounded text-emerald-600 focus:ring-emerald-500" value="1">
+                                    <span class="text-sm">Sering berbohong & manipulatif</span>
+                                </label>
+                                <label class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 cursor-pointer transition select-none">
+                                    <input type="checkbox" class="risk-checkbox mt-1 rounded text-emerald-600 focus:ring-emerald-500" value="1">
+                                    <span class="text-sm">Uang cepat habis / barang berharga hilang</span>
+                                </label>
+                                <label class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 cursor-pointer transition select-none">
+                                    <input type="checkbox" class="risk-checkbox mt-1 rounded text-emerald-600 focus:ring-emerald-500" value="1">
+                                    <span class="text-sm">Nilai akademis / performa kerja hancur</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Actions and output -->
+                    <div class="pt-6 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <button onclick="calculateRisk()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm transition">
+                            <i class="fa-solid fa-calculator mr-2"></i> Hitung Hasil Analisis
+                        </button>
+                        <button onclick="resetRiskChecklist()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 font-bold text-sm text-slate-700 dark:text-slate-300 transition">
+                            Hapus Semua Pilihan
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Slider column (4 cols) -->
+                <div class="lg:col-span-4 bg-gradient-to-br from-slate-900 to-emerald-950 text-white rounded-3xl p-6 md:p-8 flex flex-col justify-between border border-emerald-500/20">
+                    <div class="space-y-6">
+                        <h3 class="text-xl font-extrabold text-emerald-400">Slider Edukasi Siklus Ketergantungan</h3>
+                        
+                        <!-- Slider Content Container -->
+                        <div class="relative bg-white/5 border border-white/10 p-5 rounded-2xl min-h-[160px] flex flex-col justify-center">
+                            <div id="slider-content" class="space-y-2 transition-all duration-300">
+                                <span class="text-[10px] bg-amber-500/20 text-amber-400 border border-amber-500/30 px-2 py-0.5 rounded-full uppercase tracking-wider font-extrabold">Tahap 1: Coba-coba</span>
+                                <h4 class="font-bold text-base mt-2">Kumpul-kumpul Kurang Sehat</h4>
+                                <p class="text-xs text-slate-300">Awalnya hanya ingin diterima di pergaulan kelompok bermain atau ikut tren liburan.</p>
+                            </div>
+                        </div>
+
+                        <!-- Slider navigation controls -->
+                        <div class="flex items-center justify-between">
+                            <button onclick="prevSlide()" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition">
+                                <i class="fa-solid fa-chevron-left text-sm"></i>
+                            </button>
+                            <span id="slider-indicator" class="text-xs text-slate-400 font-bold">1 / 4</span>
+                            <button onclick="nextSlide()" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition">
+                                <i class="fa-solid fa-chevron-right text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="pt-6 border-t border-white/10 mt-6 space-y-3">
+                        <h4 class="font-bold text-xs uppercase tracking-wider text-amber-400">Statistik Global Bahaya</h4>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-black/30 p-3 rounded-xl text-center">
+                                <span class="block text-2xl font-extrabold text-red-400 animate-pulse">5.7jt+</span>
+                                <span class="text-[9px] text-slate-400 uppercase tracking-widest font-bold">Pengguna di Indonesia</span>
+                            </div>
+                            <div class="bg-black/30 p-3 rounded-xl text-center">
+                                <span class="block text-2xl font-extrabold text-red-400 animate-pulse">40-50</span>
+                                <span class="text-[9px] text-slate-400 uppercase tracking-widest font-bold">Meninggal / Hari</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: BAHAYA NARKOBA SAAT LEBARAN / LIBURAN -->
+        <section id="lebaran" class="space-y-12">
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <span class="text-emerald-600 dark:text-emerald-400 font-extrabold text-xs uppercase tracking-widest block">Proteksi di Hari Kemenangan</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold">Waspadai Penyalahgunaan Saat Hari Raya</h2>
+                <p class="text-slate-600 dark:text-slate-400">Libur panjang hari raya Idul Adha dan Idul Fitri sering dimanfaatkan pengedar untuk menyasar remaja yang berkumpul hingga larut malam. Jaga pergaulan dengan aktivitas aman dan positif!</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Activity Timeline (Left) -->
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 md:p-8 shadow-sm space-y-8">
+                    <h3 class="text-xl font-extrabold text-slate-900 dark:text-white flex items-center gap-2">
+                        <i class="fa-solid fa-route text-emerald-600"></i> Timeline Aktivitas Aman & Berkah
+                    </h3>
+                    
+                    <div class="space-y-6 relative border-l border-emerald-500/30 pl-6 ml-4">
+                        <!-- Timeline Item 1 -->
+                        <div class="relative">
+                            <span class="absolute -left-10 top-1.5 w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center text-white text-xs font-bold">1</span>
+                            <h4 class="font-bold text-slate-800 dark:text-slate-200">Malam Takbiran Positif</h4>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Isi malam takbiran dengan berkumpul di masjid terdekat, mengumandangkan takbir, atau bincang keagamaan bersama keluarga.</p>
+                        </div>
+                        <!-- Timeline Item 2 -->
+                        <div class="relative">
+                            <span class="absolute -left-10 top-1.5 w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center text-white text-xs font-bold">2</span>
+                            <h4 class="font-bold text-slate-800 dark:text-slate-200">Shalat Ied & Qurban Berkah</h4>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Melaksanakan ibadah Shalat Idul Adha bersama seluruh anggota keluarga dan membantu proses distribusi daging kurban secara merata.</p>
+                        </div>
+                        <!-- Timeline Item 3 -->
+                        <div class="relative">
+                            <span class="absolute -left-10 top-1.5 w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center text-white text-xs font-bold">3</span>
+                            <h4 class="font-bold text-slate-800 dark:text-slate-200">Silaturahmi & Rekreasi Sehat</h4>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Berkunjung ke rumah kerabat dekat atau bermain game sehat, berolahraga, dan menjaga komunikasi kekeluargaan.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dos and Don'ts Box (Right) -->
+                <div class="bg-slate-900 text-white rounded-3xl p-6 md:p-8 border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-extrabold mb-6 text-emerald-400 flex items-center gap-2">
+                            <i class="fa-solid fa-circle-exclamation text-amber-400"></i> Tips Menjaga Diri & Pergaulan
+                        </h3>
+                        <p class="text-sm text-slate-400 mb-6">Patuhi komitmen kebaikan ini untuk menyelamatkan diri serta orang-orang terkasih dari kehancuran narkoba:</p>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <!-- Safe (Do's) -->
+                            <div class="bg-white/5 p-4 rounded-xl border border-white/10 space-y-3">
+                                <span class="font-extrabold text-xs uppercase text-emerald-400 tracking-wider">✅ Jalankan</span>
+                                <ul class="text-xs text-slate-300 space-y-2">
+                                    <li>• Silaturahmi keluarga</li>
+                                    <li>• Takbiran positif di masjid</li>
+                                    <li>• Main game sehat & kreatif</li>
+                                    <li>• Berbagi kebaikan qurban</li>
+                                </ul>
+                            </div>
+                            <!-- Unsafe (Don'ts) -->
+                            <div class="bg-white/5 p-4 rounded-xl border border-white/10 space-y-3">
+                                <span class="font-extrabold text-xs uppercase text-red-400 tracking-wider">❌ Jauhi</span>
+                                <ul class="text-xs text-slate-300 space-y-2">
+                                    <li>• Nongkrong bebas tengah malam</li>
+                                    <li>• Minuman keras (Miras)</li>
+                                    <li>• Merokok / Narkoba</li>
+                                    <li>• Menyetir ugal-ugalan</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="mt-12 lg:mt-0 relative">
-                    <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=1000&auto=format&fit=crop" alt="Kegiatan Warga" class="rounded-xl shadow-2xl object-cover h-96 w-full">
-                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-lg shadow-xl border-t-4 border-green-600 hidden sm:block">
-                        <p class="text-3xl font-extrabold text-green-600">100+</p>
-                        <p class="text-gray-600 font-semibold">Relawan Aktif</p>
+
+                    <div class="bg-amber-500/15 border border-amber-500/20 rounded-2xl p-4 mt-6">
+                        <span class="block text-xs font-extrabold text-amber-400 mb-1">💡 Pengingat Penting</span>
+                        <p class="text-xs text-slate-300">"Jangan sekali-kali mencoba narkoba karena ajakan teman sepermainan yang mengklaim 'untuk meningkatkan stamina takbiran atau begadang'. Itu adalah jebakan awal adiksi!"</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 3️⃣ DATA & FAKTA BAHAYA NARKOBA -->
-    <section id="edukasi" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-extrabold text-gray-900">Kenali Bahayanya. Lindungi Keluarga Kita.</h2>
-                <p class="mt-4 text-lg text-gray-600">Pengetahuan adalah tameng utama dari ancaman narkotika.</p>
-            </div>
-
-            <!-- Galeri Jenis Narkoba -->
-            <h3 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-2">Jenis Narkoba & Dampaknya</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-                <!-- Kartu 1 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition group">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1603908863640-1017df8ed8e7?q=80&w=600&auto=format&fit=crop" alt="Ganja" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <h4 class="font-bold text-xl text-red-600 mb-2">Ganja (Marijuana)</h4>
-                        <p class="text-gray-600 text-sm">Menyebabkan halusinasi, hilangnya konsentrasi, detak jantung cepat, dan kerusakan memori jangka panjang.</p>
-                    </div>
+        <!-- SECTION 5: ARTIKEL EDUKASI (DENGAN SEARCH DAN KOMENTAR AKTIF) -->
+        <section id="artikel" class="space-y-12">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+                <div class="space-y-4 max-w-xl">
+                    <span class="text-emerald-600 dark:text-emerald-400 font-extrabold text-xs uppercase tracking-widest block">Literasi Informasi</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold">Artikel Edukasi Anti Narkoba</h2>
+                    <p class="text-slate-600 dark:text-slate-400">Bacalah artikel pilihan kami untuk membekali wawasan pertahanan diri Anda.</p>
                 </div>
-                <!-- Kartu 2 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition group">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1579273166152-d725a4e2b755?q=80&w=600&auto=format&fit=crop" alt="Sabu-sabu" class="w-full h-full object-cover group-hover:scale-110 transition duration-500 grayscale hover:grayscale-0">
-                    </div>
-                    <div class="p-6">
-                        <h4 class="font-bold text-xl text-red-600 mb-2">Sabu (Methamphetamine)</h4>
-                        <p class="text-gray-600 text-sm">Sangat adiktif. Merusak gigi, menyebabkan paranoid, halusinasi parah, stroke, hingga kematian mendadak.</p>
-                    </div>
-                </div>
-                <!-- Kartu 3 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition group">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1626025287664-d6ee639e44bc?q=80&w=600&auto=format&fit=crop" alt="Ekstasi" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <h4 class="font-bold text-xl text-red-600 mb-2">Pil Ekstasi</h4>
-                        <p class="text-gray-600 text-sm">Stimulan yang memicu dehidrasi fatal, gagal ginjal, kerusakan otak permanen, dan depresi berat pasca penggunaan.</p>
-                    </div>
-                </div>
-                <!-- Kartu 4 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition group">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1584308666744-24d5e4b6c38f?q=80&w=600&auto=format&fit=crop" alt="Heroin" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <h4 class="font-bold text-xl text-red-600 mb-2">Heroin (Putaw)</h4>
-                        <p class="text-gray-600 text-sm">Menekan sistem saraf pusat, melambatkan pernapasan hingga koma. Risiko tinggi HIV/AIDS akibat jarum suntik bergantian.</p>
+                <!-- Search & Filters -->
+                <div class="flex items-center gap-3 w-full md:w-auto max-w-md">
+                    <div class="relative w-full">
+                        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-slate-400"></i>
+                        <input type="text" id="article-search" oninput="filterArticles()" placeholder="Cari judul artikel..." class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-sm focus:ring-2 focus:ring-emerald-500 focus:outline-none">
                     </div>
                 </div>
             </div>
 
-            <!-- Fakta & Tanda -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-red-50 p-6 rounded-lg border border-red-100">
-                    <div class="bg-red-500 w-12 h-12 rounded-full flex items-center justify-center mb-4 text-white">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-                    </div>
-                    <h4 class="font-bold text-lg mb-2">Dampak Kesehatan</h4>
-                    <p class="text-sm text-gray-700">Kerusakan organ vital (otak, jantung, paru-paru), penurunan imun, HIV/AIDS, gangguan mental berat, hingga overdosis berujung kematian.</p>
-                </div>
-                <div class="bg-blue-50 p-6 rounded-lg border border-blue-100">
-                    <div class="bg-blue-500 w-12 h-12 rounded-full flex items-center justify-center mb-4 text-white">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
-                    </div>
-                    <h4 class="font-bold text-lg mb-2">Dampak Sosial & Hukum</h4>
-                    <p class="text-sm text-gray-700">Dikucilkan masyarakat, hancurnya masa depan, tindak kriminal pencurian, serta ancaman hukuman penjara hingga hukuman mati.</p>
-                </div>
-                <div class="bg-yellow-50 p-6 rounded-lg border border-yellow-100">
-                    <div class="bg-yellow-500 w-12 h-12 rounded-full flex items-center justify-center mb-4 text-white">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                    </div>
-                    <h4 class="font-bold text-lg mb-2">Tanda Penyalahgunaan</h4>
-                    <p class="text-sm text-gray-700">Sering menyendiri, mata merah, perubahan pola tidur drastis, emosi tidak stabil, meminta/mencuri uang, dan barang berharga di rumah sering hilang.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4️⃣ FORM LAPORAN ANONIM -->
-    <section id="lapor" class="py-20 bg-slate-900 text-white relative overflow-hidden">
-        <!-- Background Pattern -->
-        <div class="absolute inset-0 opacity-10">
-            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="none" viewBox="0 0 100 100"><path fill="#fff" d="M10 10h10v10H10zM30 30h10v10H30zM50 50h10v10H50zM70 70h10v10H70z"/></svg>
-        </div>
-        
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-10">
-                <div class="inline-flex bg-red-600 p-4 rounded-full mb-4 shadow-lg border-4 border-slate-800">
-                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
-                </div>
-                <h2 class="text-3xl font-extrabold">Form Laporan Aman & Rahasia</h2>
-                <p class="mt-4 text-gray-400">Melihat aktivitas mencurigakan terkait narkoba di lingkungan kita? Laporkan di sini. Identitas Anda dijamin 100% aman dan dirahasiakan.</p>
+            <!-- Category Filters -->
+            <div class="flex flex-wrap gap-2 pb-4">
+                <button onclick="filterCategory('all')" class="cat-btn px-4 py-1.5 rounded-full text-xs font-bold bg-emerald-600 text-white transition">Semua Kategori</button>
+                <button onclick="filterCategory('bahaya')" class="cat-btn px-4 py-1.5 rounded-full text-xs font-bold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition">Bahaya Narkoba</button>
+                <button onclick="filterCategory('sosial')" class="cat-btn px-4 py-1.5 rounded-full text-xs font-bold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition">Tips Pergaulan</button>
+                <button onclick="filterCategory('motivasi')" class="cat-btn px-4 py-1.5 rounded-full text-xs font-bold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition">Motivasi Sehat</button>
             </div>
 
-            <form id="formLaporan" class="bg-slate-800 p-8 rounded-2xl shadow-2xl border border-slate-700" onsubmit="submitLaporan(event)">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                    <div>
-                        <label class="block text-sm font-medium text-gray-300 mb-2">Nama (Opsional)</label>
-                        <input type="text" class="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500 transition" placeholder="Samarkan atau kosongkan">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-300 mb-2">Nomor HP (Opsional)</label>
-                        <input type="tel" class="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500 transition" placeholder="Untuk konfirmasi bila perlu">
-                    </div>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                    <div>
-                        <label class="block text-sm font-medium text-gray-300 mb-2">Lokasi / Alamat Kejadian <span class="text-red-500">*</span></label>
-                        <input type="text" required class="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500 transition" placeholder="Cth: Jl. Mawar RT 02, Dekat pos kamling">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-300 mb-2">Waktu Kejadian <span class="text-red-500">*</span></label>
-                        <input type="datetime-local" required class="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500 transition">
-                    </div>
-                </div>
+            <!-- Articles grid dynamically populated or editable from dashboard -->
+            <div id="articles-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Dynamic items will be added via JS on init -->
+            </div>
+        </section>
 
-                <div class="mb-6">
-                    <label class="block text-sm font-medium text-gray-300 mb-2">Deskripsi Laporan <span class="text-red-500">*</span></label>
-                    <textarea rows="4" required class="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500 transition" placeholder="Ceritakan detail aktivitas yang mencurigakan..."></textarea>
-                </div>
-
-                <div class="mb-6">
-                    <label class="block text-sm font-medium text-gray-300 mb-2">Upload Bukti Foto/Video (Opsional)</label>
-                    <input type="file" accept="image/*,video/*" class="w-full text-sm text-gray-400 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-slate-700 file:text-white hover:file:bg-slate-600 transition">
-                </div>
-
-                <div class="flex items-center mb-8">
-                    <input id="kerahasiaan" type="checkbox" required class="w-4 h-4 text-red-600 bg-slate-900 border-gray-600 rounded focus:ring-red-500 focus:ring-2">
-                    <label for="kerahasiaan" class="ml-2 text-sm text-gray-300">Saya setuju data ini dikirimkan ke satgas keamanan dan diproses secara rahasia.</label>
-                </div>
-
-                <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-lg transition duration-300 flex justify-center items-center gap-2 text-lg shadow-lg">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
-                    Kirim Laporan Sekarang
-                </button>
-            </form>
-        </div>
-    </section>
-
-    <!-- 5️⃣ FORM PENDAFTARAN RELAWAN -->
-    <section id="relawan" class="py-20 bg-white relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:grid lg:grid-cols-5 gap-12">
-            
-            <div class="lg:col-span-2 mb-10 lg:mb-0">
-                <h2 class="text-3xl font-extrabold text-gray-900 mb-6">Gabung Jadi Relawan Anti Narkoba</h2>
-                <p class="text-gray-600 mb-8">Kampung kita butuh Anda! Mari bahu-membahu melindungi generasi muda Pondok Jati Selatan. Jadilah bagian dari perubahan positif.</p>
-                <img src="https://images.unsplash.com/photo-1593113563332-dfa90224f4e6?q=80&w=800&auto=format&fit=crop" alt="Relawan" class="rounded-xl shadow-lg w-full h-64 object-cover">
+        <!-- SECTION 6: KONSULTASI & BANTUAN (LAPORAN ANONIM + LIVE CHAT) -->
+        <section id="bantuan" class="space-y-12">
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <span class="text-emerald-600 dark:text-emerald-400 font-extrabold text-xs uppercase tracking-widest block">Butuh Pertolongan?</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold">Portal Konsultasi & Laporan Anonim</h2>
+                <p class="text-slate-600 dark:text-slate-400">Kami menjamin 100% kerahasiaan identitas pelapor. Hubungi kami, laporkan penyalahgunaan di sekitar Anda demi masa depan yang cerah dan suci.</p>
             </div>
 
-            <div class="lg:col-span-3 bg-gray-50 p-8 rounded-2xl border border-gray-200 shadow-sm">
-                <form id="formRelawan" onsubmit="submitRelawan(event)">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-4">
+            <div class="grid lg:grid-cols-12 gap-8">
+                <!-- Anonymous Report Form (7 cols) -->
+                <div class="lg:col-span-7 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 md:p-8 shadow-sm">
+                    <h3 class="text-xl font-extrabold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-user-secret text-emerald-600"></i> Form Laporan Anonim (Terlindungi)
+                    </h3>
+                    
+                    <form id="report-form" onsubmit="submitAnonymousReport(event)" class="space-y-5">
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Nama Pelapor (Boleh Anonim)</label>
+                                <input type="text" id="report-name" value="Anonim" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-sm focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Jenis Masalah / Kasus</label>
+                                <select id="report-category" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-sm focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                                    <option value="Penyalahgunaan">Penyalahgunaan / Pemakai</option>
+                                    <option value="Transaksi">Transaksi / Pengedar</option>
+                                    <option value="Permintaan Rehab">Permintaan Rehabilitasi Mandiri</option>
+                                    <option value="Konsultasi">Konsultasi / Curhat</option>
+                                </select>
+                            </div>
+                        </div>
+
                         <div>
-                            <label class="block text-sm font-semibold text-gray-700 mb-1">Nama Lengkap *</label>
-                            <input type="text" required class="w-full border-gray-300 rounded-lg px-4 py-2 focus:ring-green-500 focus:border-green-500 bg-white border">
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Isi Kronologi Kejadian / Detail Laporan</label>
+                            <textarea id="report-detail" rows="4" required placeholder="Tulis rincian lokasi, pelaku, jenis zat yang dicurigai..." class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-sm focus:ring-2 focus:ring-emerald-500 focus:outline-none"></textarea>
                         </div>
+
+                        <!-- Image upload mockup with preview -->
                         <div>
-                            <label class="block text-sm font-semibold text-gray-700 mb-1">NIK (Nomor Induk Kependudukan) *</label>
-                            <input type="number" required class="w-full border-gray-300 rounded-lg px-4 py-2 focus:ring-green-500 focus:border-green-500 bg-white border">
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Upload Bukti Tambahan (Optional)</label>
+                            <div class="border-2 border-dashed border-slate-200 dark:border-slate-800 rounded-xl p-4 text-center cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-900/30 transition relative">
+                                <input type="file" id="report-file" onchange="previewUploadImage(event)" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer">
+                                <div id="upload-prompt" class="space-y-1">
+                                    <i class="fa-solid fa-cloud-arrow-up text-2xl text-slate-400"></i>
+                                    <p class="text-xs text-slate-500">Klik atau seret file gambar bukti ke sini</p>
+                                </div>
+                                <div id="upload-preview-container" class="hidden flex items-center justify-center gap-3">
+                                    <img id="upload-preview-img" src="#" alt="Preview" class="h-16 w-16 object-cover rounded-lg border border-slate-200">
+                                    <div class="text-left">
+                                        <p id="upload-filename" class="text-xs font-bold truncate max-w-xs">bukti.jpg</p>
+                                        <button type="button" onclick="clearUploadImage(event)" class="text-[10px] text-red-500 font-bold hover:underline">Hapus File</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <input type="checkbox" required id="report-consent" class="rounded text-emerald-600 focus:ring-emerald-500">
+                            <label for="report-consent" class="text-xs text-slate-500 cursor-pointer select-none">Saya menyetujui laporan dikirimkan dengan perlindungan anonimitas BNN.</label>
+                        </div>
+
+                        <button type="submit" class="w-full py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm transition shadow-lg shadow-emerald-600/20">
+                            <i class="fa-solid fa-paper-plane mr-2"></i> Kirim Laporan Rahasia
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Live Consultation Simulation (5 cols) -->
+                <div class="lg:col-span-5 bg-gradient-to-tr from-slate-950 to-emerald-950 text-white rounded-3xl p-6 md:p-8 border border-emerald-500/20 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 pb-4 border-b border-white/10 mb-6">
+                            <div class="relative">
+                                <span class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-emerald-400 border-2 border-slate-950 rounded-full"></span>
+                                <div class="w-10 h-10 rounded-full bg-emerald-600 flex items-center justify-center font-bold">
+                                    <i class="fa-solid fa-user-doctor"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm">Konselor Virtual "Bakti"</h4>
+                                <span class="text-[10px] text-slate-400">Online • Layanan Bantuan Siap Siaga</span>
+                            </div>
+                        </div>
+
+                        <!-- Chat message thread -->
+                        <div id="chat-thread" class="space-y-4 max-h-[220px] overflow-y-auto pr-2 text-xs">
+                            <div class="flex gap-2">
+                                <div class="bg-white/10 p-3 rounded-2xl rounded-tl-none max-w-[85%]">
+                                    Assalamu'alaikum wr. wb. Selamat datang di portal edukasi Idul Adha 1447 H. Ada yang bisa kami bantu seputar bahaya narkoba atau konsultasi keluarga?
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="mb-4">
-                        <label class="block text-sm font-semibold text-gray-700 mb-1">Alamat Domisili *</label>
-                        <textarea rows="2" required class="w-full border-gray-300 rounded-lg px-4 py-2 focus:ring-green-500 focus:border-green-500 bg-white border"></textarea>
+                    <!-- Input message box -->
+                    <div class="pt-4 border-t border-white/10 mt-6 flex gap-2">
+                        <input type="text" id="chat-input" onkeydown="handleChatKey(event)" placeholder="Ketik pesan konsultasi..." class="w-full px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-xs focus:ring-1 focus:ring-emerald-400 focus:outline-none text-white">
+                        <button onclick="sendChatMessage()" class="p-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white transition">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
                     </div>
+                </div>
+            </div>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-4">
-                        <div>
-                            <label class="block text-sm font-semibold text-gray-700 mb-1">No. HP / WhatsApp *</label>
-                            <input type="tel" required class="w-full border-gray-300 rounded-lg px-4 py-2 focus:ring-green-500 focus:border-green-500 bg-white border">
+            <!-- Emergency Hotlines -->
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 grid md:grid-cols-3 gap-6">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-phone-flip"></i>
+                    </div>
+                    <div>
+                        <span class="block text-xs text-slate-400 uppercase font-bold tracking-wider">Panggilan Darurat BNN</span>
+                        <a href="tel:184" class="text-lg font-bold hover:text-emerald-500">184 (Nasional)</a>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center text-xl">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <div>
+                        <span class="block text-xs text-slate-400 uppercase font-bold tracking-wider">SMS / WA Pengaduan</span>
+                        <a href="https://wa.me/6281221675675" target="_blank" class="text-lg font-bold hover:text-emerald-500">0812-2167-5675</a>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-red-500/10 text-red-600 flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-hospital"></i>
+                    </div>
+                    <div>
+                        <span class="block text-xs text-slate-400 uppercase font-bold tracking-wider">Rehab Terdekat</span>
+                        <p class="text-sm font-bold text-slate-700 dark:text-slate-300">RSB Lido BNN Bogor</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: GALLERY CAMPAIGN (CAROUSEL & LIGHTBOX VIDEO) -->
+        <section id="gallery" class="space-y-12">
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <span class="text-emerald-600 dark:text-emerald-400 font-extrabold text-xs uppercase tracking-widest block">Galeri Karya & Aksi</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold">Gallery Campaign Anti Narkoba</h2>
+                <p class="text-slate-600 dark:text-slate-400">Poster edukatif dan dokumentasi aksi bersama melawan penyebaran narkoba di seluruh Indonesia.</p>
+            </div>
+
+            <!-- Beautiful grid with lightbox triggers -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Gallery Item 1 -->
+                <div onclick="openLightbox('Keluarga Sehat Tanpa Narkoba', 'Poster edukasi keharmonisan keluarga Islami dalam menjaga anak-anak dari ancaman narkotika menjelang Idul Adha 1447 H.')" class="group relative overflow-hidden rounded-2xl aspect-[4/3] bg-emerald-900 cursor-pointer shadow-md hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent z-10"></div>
+                    <!-- Custom Vector Poster Art in SVG (no broken urls) -->
+                    <div class="absolute inset-0 flex items-center justify-center text-white/10 p-4">
+                        <svg class="w-full h-full opacity-30" viewBox="0 0 100 100" fill="currentColor">
+                            <path d="M50,20 C60,40 40,40 50,60 C60,60 70,30 50,20 Z" />
+                        </svg>
+                    </div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-5 z-20">
+                        <span class="text-[9px] bg-emerald-500 text-white font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider w-max mb-2">Poster Edukasi</span>
+                        <h4 class="font-bold text-white text-sm group-hover:text-emerald-400 transition">Keluarga Sehat Bebas Narkoba</h4>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div onclick="openLightbox('Generasi Qurani & Berprestasi', 'Dokumentasi kampanye di berbagai masjid dan ponpes se-Indonesia untuk menciptakan generasi sehat berprestasi.')" class="group relative overflow-hidden rounded-2xl aspect-[4/3] bg-amber-900 cursor-pointer shadow-md hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent z-10"></div>
+                    <div class="absolute inset-0 flex items-center justify-center text-white/10 p-4">
+                        <svg class="w-full h-full opacity-30" viewBox="0 0 100 100" fill="currentColor">
+                            <rect x="25" y="25" width="50" height="50" rx="5" />
+                        </svg>
+                    </div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-5 z-20">
+                        <span class="text-[9px] bg-amber-500 text-slate-950 font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider w-max mb-2">Foto Kegiatan</span>
+                        <h4 class="font-bold text-white text-sm group-hover:text-amber-400 transition">Generasi Qurani Berprestasi</h4>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div onclick="openLightbox('Sosialisasi Bahaya BNN Lido', 'Foto bersama kader penyuluh anti-narkoba Indonesia dalam membentengi lingkungan menjelang malam takbiran.')" class="group relative overflow-hidden rounded-2xl aspect-[4/3] bg-indigo-950 cursor-pointer shadow-md hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent z-10"></div>
+                    <div class="absolute inset-0 flex items-center justify-center text-white/10 p-4">
+                        <svg class="w-full h-full opacity-30" viewBox="0 0 100 100" fill="currentColor">
+                            <circle cx="50" cy="50" r="30" />
+                        </svg>
+                    </div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-5 z-20">
+                        <span class="text-[9px] bg-emerald-500 text-white font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider w-max mb-2">Sosialisasi</span>
+                        <h4 class="font-bold text-white text-sm group-hover:text-emerald-400 transition">Penyuluhan Masyarakat Lido</h4>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 (Animated Video Popup) -->
+                <div onclick="openVideoPopup()" class="group relative overflow-hidden rounded-2xl aspect-[4/3] bg-rose-950 cursor-pointer shadow-md hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent z-10"></div>
+                    <div class="absolute inset-0 flex items-center justify-center z-20">
+                        <div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center text-white text-lg group-hover:scale-110 transition duration-300">
+                            <i class="fa-solid fa-play animate-pulse"></i>
                         </div>
-                        <div>
-                            <label class="block text-sm font-semibold text-gray-700 mb-1">Email (Opsional)</label>
-                            <input type="email" class="w-full border-gray-300 rounded-lg px-4 py-2 focus:ring-green-500 focus:border-green-500 bg-white border">
-                        </div>
                     </div>
-
-                    <div class="mb-4">
-                        <label class="block text-sm font-semibold text-gray-700 mb-1">Pekerjaan *</label>
-                        <input type="text" required class="w-full border-gray-300 rounded-lg px-4 py-2 focus:ring-green-500 focus:border-green-500 bg-white border">
-                    </div>
-
-                    <div class="mb-4">
-                        <label class="block text-sm font-semibold text-gray-700 mb-2">Pilihan Peran Kelompok (Pilih minimal 1) *</label>
-                        <div class="grid grid-cols-2 gap-3">
-                            <label class="flex items-center space-x-2 bg-white border p-3 rounded-lg cursor-pointer hover:bg-green-50 transition">
-                                <input type="checkbox" class="w-4 h-4 text-green-600 border-gray-300 rounded focus:ring-green-500">
-                                <span class="text-sm font-medium text-gray-700">Edukasi & Penyuluhan</span>
-                            </label>
-                            <label class="flex items-center space-x-2 bg-white border p-3 rounded-lg cursor-pointer hover:bg-green-50 transition">
-                                <input type="checkbox" class="w-4 h-4 text-green-600 border-gray-300 rounded focus:ring-green-500">
-                                <span class="text-sm font-medium text-gray-700">Keamanan Lingkungan</span>
-                            </label>
-                            <label class="flex items-center space-x-2 bg-white border p-3 rounded-lg cursor-pointer hover:bg-green-50 transition">
-                                <input type="checkbox" class="w-4 h-4 text-green-600 border-gray-300 rounded focus:ring-green-500">
-                                <span class="text-sm font-medium text-gray-700">Media & Sosial (Digital)</span>
-                            </label>
-                            <label class="flex items-center space-x-2 bg-white border p-3 rounded-lg cursor-pointer hover:bg-green-50 transition">
-                                <input type="checkbox" class="w-4 h-4 text-green-600 border-gray-300 rounded focus:ring-green-500">
-                                <span class="text-sm font-medium text-gray-700">Konseling & Pendampingan</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="mb-8">
-                        <label class="block text-sm font-semibold text-gray-700 mb-1">Motivasi Bergabung</label>
-                        <textarea rows="2" class="w-full border-gray-300 rounded-lg px-4 py-2 focus:ring-green-500 focus:border-green-500 bg-white border"></textarea>
-                    </div>
-
-                    <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 shadow-md">
-                        Daftar Sebagai Relawan Sekarang
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6️⃣ JADWAL SOSIALISASI -->
-    <section id="jadwal" class="py-20 bg-gray-50 border-t border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-extrabold text-gray-900">Jadwal Sosialisasi & Edukasi Warga</h2>
-                <p class="mt-4 text-gray-600">Mari hadir dan tingkatkan wawasan kita bersama pakar dan aparat.</p>
-            </div>
-
-            <div class="overflow-x-auto bg-white rounded-xl shadow-sm border border-gray-200">
-                <table class="min-w-full divide-y divide-gray-200 text-sm md:text-base">
-                    <thead class="bg-gray-100">
-                        <tr>
-                            <th class="px-6 py-4 text-left font-bold text-gray-700 uppercase tracking-wider">Tanggal & Waktu</th>
-                            <th class="px-6 py-4 text-left font-bold text-gray-700 uppercase tracking-wider">Lokasi</th>
-                            <th class="px-6 py-4 text-left font-bold text-gray-700 uppercase tracking-wider">Tema Sosialisasi</th>
-                            <th class="px-6 py-4 text-left font-bold text-gray-700 uppercase tracking-wider">Pembicara</th>
-                            <th class="px-6 py-4 text-center font-bold text-gray-700 uppercase tracking-wider">Aksi</th>
-                        </tr>
-                    </thead>
-                    <tbody class="bg-white divide-y divide-gray-200">
-                        <!-- Baris 1 -->
-                        <tr class="hover:bg-gray-50 transition">
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div class="font-bold text-gray-900">12 April 2026</div>
-                                <div class="text-gray-500">19:30 - Selesai WIB</div>
-                            </td>
-                            <td class="px-6 py-4">Balai Warga RT 03</td>
-                            <td class="px-6 py-4 font-semibold text-gray-800">Kenali Narkoba Jenis Baru di Kalangan Remaja</td>
-                            <td class="px-6 py-4">AKBP Sutrisno (Polres)</td>
-                            <td class="px-6 py-4 text-center">
-                                <button onclick="daftarSosialisasi()" class="bg-blue-100 text-blue-700 hover:bg-blue-600 hover:text-white px-4 py-2 rounded-md font-semibold transition">Daftar Hadir</button>
-                            </td>
-                        </tr>
-                        <!-- Baris 2 -->
-                        <tr class="hover:bg-gray-50 transition">
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div class="font-bold text-gray-900">25 Mei 2026</div>
-                                <div class="text-gray-500">09:00 - 12:00 WIB</div>
-                            </td>
-                            <td class="px-6 py-4">Aula Puskesmas</td>
-                            <td class="px-6 py-4 font-semibold text-gray-800">Dampak Medis & Penanganan Pertama Overdosis</td>
-                            <td class="px-6 py-4">Dr. Herlina (BNN Kota)</td>
-                            <td class="px-6 py-4 text-center">
-                                <button onclick="daftarSosialisasi()" class="bg-blue-100 text-blue-700 hover:bg-blue-600 hover:text-white px-4 py-2 rounded-md font-semibold transition">Daftar Hadir</button>
-                            </td>
-                        </tr>
-                        <!-- Baris 3 -->
-                        <tr class="hover:bg-gray-50 transition">
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div class="font-bold text-gray-900">10 Juni 2026</div>
-                                <div class="text-gray-500">16:00 - Selesai WIB</div>
-                            </td>
-                            <td class="px-6 py-4">Lapangan Futsal Jati</td>
-                            <td class="px-6 py-4 font-semibold text-gray-800">Olahraga Bersama & Deklarasi Pemuda Anti Narkoba</td>
-                            <td class="px-6 py-4">Ketua Karang Taruna</td>
-                            <td class="px-6 py-4 text-center">
-                                <span class="bg-green-100 text-green-700 px-4 py-2 rounded-md font-semibold">Terbuka Umum</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-
-    <!-- 7️⃣ GALERI KEGIATAN -->
-    <section id="galeri" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-extrabold text-gray-900 text-center mb-10">Galeri Pergerakan Warga</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                <div class="relative group overflow-hidden rounded-xl h-64">
-                    <img src="https://images.unsplash.com/photo-1544928147-79a2dbc1f389?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Seminar Remaja">
-                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-4 opacity-0 group-hover:opacity-100 transition duration-300">
-                        <span class="text-white font-bold text-lg">Seminar Remaja Karang Taruna</span>
-                    </div>
-                </div>
-                <div class="relative group overflow-hidden rounded-xl h-64">
-                    <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Rapat RT RW">
-                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-4 opacity-0 group-hover:opacity-100 transition duration-300">
-                        <span class="text-white font-bold text-lg">Rapat Koordinasi Satgas Warga</span>
-                    </div>
-                </div>
-                <div class="relative group overflow-hidden rounded-xl h-64">
-                    <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Penyuluhan Kesehatan">
-                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-4 opacity-0 group-hover:opacity-100 transition duration-300">
-                        <span class="text-white font-bold text-lg">Penyuluhan oleh Puskesmas</span>
-                    </div>
-                </div>
-                <!-- Tambahan agar galeri penuh -->
-                <div class="relative group overflow-hidden rounded-xl h-64 md:col-span-3">
-                    <img src="https://images.unsplash.com/photo-1529156069898-49953eb1f5bc?q=80&w=1200&auto=format&fit=crop" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Patroli Malam">
-                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-6 opacity-0 group-hover:opacity-100 transition duration-300">
-                        <span class="text-white font-bold text-xl">Deklarasi Bersama & Patroli Lingkungan Malam Hari</span>
+                    <div class="absolute inset-0 flex flex-col justify-end p-5 z-20">
+                        <span class="text-[9px] bg-red-500 text-white font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider w-max mb-2">Video Edukatif</span>
+                        <h4 class="font-bold text-white text-sm group-hover:text-red-400 transition">Dokumenter: Perjuangan Bebas Adiksi</h4>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 8️⃣ MITRA KERJA SAMA -->
-    <section class="py-12 bg-gray-100 border-y border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <h3 class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-8">Didukung Penuh Oleh Mitra Kami</h3>
-            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70">
-                <!-- Simulasi Logo Institusi menggunakan teks elegan (karena aset logo asli tidak tersedia) -->
-                <div class="font-extrabold text-2xl text-gray-800 hover:text-green-600 transition">RT/RW PJS</div>
-                <div class="font-extrabold text-2xl text-gray-800 hover:text-blue-600 transition">Karang Taruna</div>
-                <div class="font-extrabold text-2xl text-gray-800 hover:text-green-500 transition">Puskesmas</div>
-                <div class="font-extrabold text-2xl text-gray-800 hover:text-yellow-600 transition">POLRI</div>
-                <div class="font-extrabold text-2xl text-gray-800 hover:text-blue-800 transition">BNN Kota</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 9️⃣ KONTAK DARURAT -->
-    <section class="py-16 bg-red-600 text-white text-center">
-        <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-3xl font-extrabold mb-6">Butuh Bantuan Mendesak?</h2>
-            <p class="text-red-100 mb-8 text-lg">Jangan ragu. Segera hubungi nomor-nomor penting di bawah ini jika melihat tindak kejahatan atau butuh rehabilitasi segera.</p>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
-                <div class="bg-red-700 p-6 rounded-xl border border-red-500">
-                    <p class="text-sm text-red-200 mb-1">Hotline BNN Pusat</p>
-                    <a href="tel:184" class="text-3xl font-bold hover:underline">184</a>
-                </div>
-                <div class="bg-red-700 p-6 rounded-xl border border-red-500">
-                    <p class="text-sm text-red-200 mb-1">Polisi Setempat / Call Center</p>
-                    <a href="tel:110" class="text-3xl font-bold hover:underline">110</a>
-                </div>
-                <div class="bg-red-700 p-6 rounded-xl border border-red-500">
-                    <p class="text-sm text-red-200 mb-1">Admin / Satgas Kampung</p>
-                    <!-- REVISI NOMOR TELEPON -->
-                    <a href="tel:081934704296" class="text-3xl font-bold hover:underline">081 93-470-4296</a>
-                </div>
+        <!-- SECTION 8: KONTAK -->
+        <section id="kontak" class="space-y-12">
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <span class="text-emerald-600 dark:text-emerald-400 font-extrabold text-xs uppercase tracking-widest block">Layanan Hubungan</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold">Hubungi Portal Kami</h2>
+                <p class="text-slate-600 dark:text-slate-400">Hubungi kami melalui berbagai jalur komunikasi untuk bantuan cepat atau kolaborasi kampanye anti narkoba.</p>
             </div>
 
-            <!-- REVISI LINK WA -->
-            <a href="https://wa.me/6281934704296" target="_blank" class="inline-flex items-center gap-2 bg-white text-red-600 font-bold px-8 py-4 rounded-full shadow-lg hover:bg-gray-100 transition text-lg">
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.082 21.183c-1.658 0-3.244-.439-4.664-1.253l-5.186 1.361 1.392-5.052c-.939-1.488-1.436-3.213-1.436-5.022 0-5.183 4.22-9.403 9.403-9.403 5.185 0 9.405 4.22 9.405 9.403 0 5.183-4.22 9.403-9.405 9.403z"/></svg>
-                Hubungi Satgas via WhatsApp
-            </a>
-        </div>
-    </section>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Contact card WA -->
+                <a href="https://wa.me/6281221675675" target="_blank" class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 hover:-translate-y-1.5 transition text-center shadow-sm">
+                    <div class="w-12 h-12 rounded-full bg-emerald-500/10 text-emerald-500 mx-auto flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <h4 class="font-extrabold text-base mb-1">WhatsApp BNN</h4>
+                    <p class="text-xs text-slate-500">Fast response chat bantuan rehab.</p>
+                </a>
+                <!-- Contact card IG -->
+                <a href="https://instagram.com/infobnn_ri" target="_blank" class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 hover:-translate-y-1.5 transition text-center shadow-sm">
+                    <div class="w-12 h-12 rounded-full bg-pink-500/10 text-pink-500 mx-auto flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <h4 class="font-extrabold text-base mb-1">Instagram @infobnn_ri</h4>
+                    <p class="text-xs text-slate-500">Update info kampanye harian.</p>
+                </a>
+                <!-- Contact card Email -->
+                <a href="mailto:humas@bnn.go.id" class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 hover:-translate-y-1.5 transition text-center shadow-sm">
+                    <div class="w-12 h-12 rounded-full bg-blue-500/10 text-blue-500 mx-auto flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <h4 class="font-extrabold text-base mb-1">Email Resmi</h4>
+                    <p class="text-xs text-slate-500">Surat menyurat resmi kemitraan.</p>
+                </a>
+                <!-- Contact card Map -->
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 hover:-translate-y-1.5 transition text-center shadow-sm">
+                    <div class="w-12 h-12 rounded-full bg-amber-500/10 text-amber-500 mx-auto flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                    </div>
+                    <h4 class="font-extrabold text-base mb-1">Markas BNN RI</h4>
+                    <p class="text-xs text-slate-500">Cawang, Jakarta Timur, DKI Jakarta.</p>
+                </div>
+            </div>
+        </section>
 
-    <!-- 🔟 FOOTER -->
-    <footer class="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-                <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                    <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                    PJS Bersatu
-                </h3>
-                <p class="text-sm text-gray-400">Gerakan Kampung Bersih Narkoba Pondok Jati Selatan. Berdiri bersama demi masa depan generasi penerus yang cerah tanpa belenggu narkotika.</p>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-white mt-24 border-t border-slate-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-8 pb-8 border-b border-slate-800">
+            <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-emerald-600 flex items-center justify-center text-white text-base">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <span class="font-extrabold text-base uppercase bg-gradient-to-r from-emerald-400 to-amber-300 bg-clip-text text-transparent">SAY NO TO DRUGS</span>
+                </div>
+                <p class="text-xs text-slate-400">Portal edukasi terpercaya benteng masyarakat untuk melindungi generasi penerus bangsa menyambut Hari Raya Suci Idul Adha 1447 H bebas adiksi.</p>
             </div>
             <div>
-                <h4 class="font-bold text-white mb-4">Informasi Kontak</h4>
-                <ul class="space-y-2 text-sm">
-                    <li class="flex items-start gap-2">
-                        <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                        Balai Warga RT/001/RW 13, Pondok Jati Tanggerang Selatan
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                        satgas.pjs@antinarkoba.id
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-bold text-white mb-4">Ikuti Kami</h4>
-                <div class="flex space-x-4">
-                    <!-- Placeholder Social Icons -->
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                    </a>
+                <h4 class="font-bold text-sm uppercase tracking-wider mb-4 text-emerald-400">Navigasi Link</h4>
+                <div class="grid grid-cols-2 gap-2 text-xs text-slate-400">
+                    <a href="#home" class="hover:underline">Home</a>
+                    <a href="#tentang" class="hover:underline">Tentang Narkoba</a>
+                    <a href="#ciri" class="hover:underline">Ciri Pengguna</a>
+                    <a href="#lebaran" class="hover:underline">Bahaya Lebaran</a>
+                    <a href="#bantuan" class="hover:underline">Konsultasi</a>
                 </div>
             </div>
+            <div>
+                <h4 class="font-bold text-sm uppercase tracking-wider mb-4 text-amber-400">Komitmen Bersama</h4>
+                <p class="text-xs text-slate-400">"Bersih diri, bersihkan keluarga, bersihkan lingkungan kita demi mewujudkan kurban yang diredhai Allah SWT."</p>
+            </div>
         </div>
-        <div class="max-w-7xl mx-auto px-4 mt-8 pt-8 border-t border-gray-800 text-center text-sm text-gray-500">
-            &copy; 2026 Gerakan Anti Narkoba Pondok Jati Selatan. All rights reserved.
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+            <p>© 2026 Portal Edukasi Anti-Narkoba BNN. Seluruh Hak Cipta Dilindungi.</p>
+            <div class="flex gap-4">
+                <a href="#" class="hover:underline">Syarat Layanan</a>
+                <a href="#" class="hover:underline">Kebijakan Privasi</a>
+            </div>
         </div>
     </footer>
 
-    <!-- MODAL POPUP UNTUK SIMULASI SYSTEM -->
-    <div id="successModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black bg-opacity-60 backdrop-blur-sm transition-opacity">
-        <div class="bg-white p-8 rounded-2xl shadow-2xl max-w-md w-full text-center transform scale-95 transition-transform" id="modalContent">
-            <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+    <!-- INTERACTIVE FLOATING ADMIN CONTROL PANEL (SISTEM PENGELOLA MANDIRI) -->
+    <div id="admin-panel" class="fixed inset-y-0 right-0 w-full max-w-lg z-50 glass-effect border-l border-slate-200 dark:border-slate-800 shadow-2xl p-6 translate-x-full transition-transform duration-500 flex flex-col justify-between">
+        <div>
+            <div class="flex items-center justify-between pb-4 border-b border-slate-100 dark:border-slate-800 mb-6">
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-gears text-2xl text-emerald-500 animate-spin-slow"></i>
+                    <div>
+                        <h3 class="font-bold text-lg">Sistem Pengelolaan Mandiri</h3>
+                        <p class="text-[10px] text-slate-400 uppercase tracking-widest font-extrabold">Edisi Idul Adha 1447 H</p>
+                    </div>
+                </div>
+                <button onclick="toggleAdminPanel()" class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center hover:bg-slate-200 transition">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
             </div>
-            <h3 class="text-2xl font-bold text-gray-900 mb-2" id="modalTitle">Berhasil!</h3>
-            <p class="text-gray-600 mb-8" id="modalText">Pesan Anda telah kami terima.</p>
-            <button onclick="closeModal()" class="w-full bg-green-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-green-700 transition">
-                Tutup & Kembali
-            </button>
+
+            <div class="space-y-6 overflow-y-auto max-h-[72vh] pr-2">
+                <!-- 1. Manage General Content (Banner Header) -->
+                <div class="space-y-3 bg-slate-50 dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+                    <h4 class="font-bold text-xs uppercase tracking-wider text-emerald-600 dark:text-emerald-400"><i class="fa-solid fa-pen-to-square"></i> Kelola Banner Utama</h4>
+                    <div>
+                        <label class="block text-[10px] uppercase font-bold text-slate-400 mb-1">Judul Banner Utama</label>
+                        <input type="text" id="input-banner-title" class="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-xs text-slate-800 dark:text-white" value="Rayakan Hari Raya dengan Hati Bersih & Hidup Sehat Tanpa Narkoba!">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] uppercase font-bold text-slate-400 mb-1">Kalimat Kutipan Utama</label>
+                        <input type="text" id="input-banner-quote" class="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-xs text-slate-800 dark:text-white" value="&quot;Hari Raya Idul Adha 1447 H - Jauhi Narkoba, Dekatkan Diri Kepada Keluarga&quot;">
+                    </div>
+                    <button onclick="saveGeneralSettings()" class="w-full py-2 rounded-lg bg-emerald-600 text-white font-bold text-xs hover:bg-emerald-500 transition">Simpan Perubahan Banner</button>
+                </div>
+
+                <!-- 2. Manage Articles (Add New Article) -->
+                <div class="space-y-3 bg-slate-50 dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+                    <h4 class="font-bold text-xs uppercase tracking-wider text-amber-600 dark:text-amber-400"><i class="fa-solid fa-circle-plus"></i> Tambah Artikel Edukasi</h4>
+                    <div>
+                        <label class="block text-[10px] uppercase font-bold text-slate-400 mb-1">Judul Artikel</label>
+                        <input type="text" id="input-art-title" placeholder="Contoh: Pentingnya Memilih Sahabat Baik" class="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-xs text-slate-800 dark:text-white">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] uppercase font-bold text-slate-400 mb-1">Kategori</label>
+                        <select id="input-art-category" class="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-xs text-slate-800 dark:text-white">
+                            <option value="bahaya">Bahaya Narkoba</option>
+                            <option value="sosial">Tips Pergaulan</option>
+                            <option value="motivasi">Motivasi Sehat</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] uppercase font-bold text-slate-400 mb-1">Isi Singkat Ringkasan</label>
+                        <textarea id="input-art-summary" rows="3" placeholder="Deskripsi artikel singkat..." class="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-xs text-slate-800 dark:text-white"></textarea>
+                    </div>
+                    <button onclick="createNewArticle()" class="w-full py-2 rounded-lg bg-amber-500 text-slate-950 font-bold text-xs hover:bg-amber-400 transition">Tambahkan Artikel</button>
+                </div>
+
+                <!-- 3. Inbox Laporan Masuk -->
+                <div class="space-y-3 bg-slate-50 dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+                    <h4 class="font-bold text-xs uppercase tracking-wider text-blue-600 dark:text-blue-400 flex items-center justify-between">
+                        <span><i class="fa-solid fa-inbox"></i> Inbox Laporan Masuk</span>
+                        <span id="report-count-badge" class="bg-blue-200 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-2 py-0.5 rounded-full text-[10px]">0</span>
+                    </h4>
+                    <div id="inbox-container" class="space-y-2 text-xs max-h-[220px] overflow-y-auto">
+                        <p class="text-slate-400 text-center py-4">Belum ada laporan masuk.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-slate-400">
+            <span>Admin Mode Active</span>
+            <button onclick="resetAdminStorage()" class="text-red-500 hover:underline">Reset Data Lokal</button>
         </div>
     </div>
 
-    <!-- JAVASCRIPT LOGIC -->
+    <!-- LIGHTBOX MODALS FOR USER EXPERIENCES -->
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/90 hidden flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-slate-900 rounded-3xl p-6 md:p-8 max-w-lg w-full space-y-4 relative border border-slate-100 dark:border-slate-800">
+            <button onclick="closeLightboxModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center hover:bg-slate-200 transition">
+                <i class="fa-solid fa-xmark text-slate-700 dark:text-white"></i>
+            </button>
+            <div class="w-full aspect-[4/3] bg-emerald-900 rounded-2xl flex items-center justify-center text-white/10 relative overflow-hidden">
+                <svg class="w-24 h-24" viewBox="0 0 100 100" fill="currentColor">
+                    <path d="M50,15 L15,85 L85,85 Z" />
+                </svg>
+            </div>
+            <h3 id="lightbox-title" class="text-xl font-bold">Judul Campaign</h3>
+            <p id="lightbox-description" class="text-xs text-slate-500 dark:text-slate-400">Keterangan rinci poster edukasi kampanye anti narkoba.</p>
+        </div>
+    </div>
+
+    <!-- Video Popup Modal -->
+    <div id="video-modal" class="fixed inset-0 z-50 bg-black/90 hidden flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-slate-900 rounded-3xl p-6 max-w-2xl w-full relative border border-slate-100 dark:border-slate-800 space-y-4">
+            <button onclick="closeVideoModal()" class="absolute -top-12 md:-top-10 right-0 text-white hover:text-red-400 font-bold text-sm">
+                <i class="fa-solid fa-xmark mr-1"></i> Tutup
+            </button>
+            <div class="w-full aspect-video rounded-2xl bg-black overflow-hidden flex flex-col justify-center items-center p-6 text-center text-white relative">
+                <!-- Glowing geometric shapes representing safe mental states -->
+                <div class="absolute inset-0 opacity-25 flex items-center justify-center">
+                    <div class="w-64 h-64 border-4 border-emerald-500 rounded-full animate-ping"></div>
+                </div>
+                <i class="fa-solid fa-video text-4xl text-emerald-400 mb-4 animate-bounce"></i>
+                <h4 class="font-extrabold text-lg">Edukasi Sinematik: Perjuangan Bebas Adiksi</h4>
+                <p class="text-xs text-slate-400 mt-2 max-w-md">Kisah nyata para pejuang rehabilitasi yang kembali pulih untuk menyambut masa depan emas serta perayaan Hari Raya Idul Adha secara suci.</p>
+                <div class="mt-4 flex gap-3">
+                    <button onclick="playAudioFluteNote(440, 0.8, 1)" class="px-4 py-2 bg-emerald-600 rounded-lg text-xs font-bold hover:bg-emerald-500">Putar Efek Suara Flute</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feedback Message Box (Replaces Alert) -->
+    <div id="message-box" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 max-w-sm w-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-5 py-4 rounded-2xl shadow-2xl border border-slate-800 flex items-center gap-3">
+        <div id="msg-icon-container" class="w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center text-white">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <div>
+            <h4 id="msg-title" class="font-bold text-sm">Berhasil!</h4>
+            <p id="msg-desc" class="text-xs text-slate-400 dark:text-slate-600 mt-0.5">Operasi sukses dilaksanakan.</p>
+        </div>
+    </div>
+
     <script>
-        // Fiktur Simulasi Laporan Anonim
-        function submitLaporan(e) {
-            e.preventDefault();
-            // Tampilkan Modal
-            showModal(
-                "Laporan Terkirim!", 
-                "Terima kasih. Laporan Anda telah masuk ke sistem aman kami dan akan segera ditindaklanjuti oleh Satgas. Identitas Anda terjamin rahasia."
-            );
-            // Reset form
-            document.getElementById('formLaporan').reset();
-        }
+        // Setup Web Audio API Instrumental Synth for Islamic Music
+        let audioCtx = null;
+        let isMusicPlaying = false;
+        let oscillator = null;
+        let filterNode = null;
+        let gainNode = null;
+        let intervalId = null;
 
-        // Fiktur Simulasi Pendaftaran Relawan
-        function submitRelawan(e) {
-            e.preventDefault();
-            showModal(
-                "Pendaftaran Berhasil!", 
-                "Luar biasa! Terima kasih telah bergabung. Tim koordinator kami akan segera menghubungi Anda via WhatsApp untuk orientasi tahap awal."
-            );
-            document.getElementById('formRelawan').reset();
-        }
-
-        // Fiktur Simulasi Tombol Daftar Sosialisasi
-        function daftarSosialisasi() {
-            showModal(
-                "Kursi Dibooking", 
-                "Nama Anda telah tercatat untuk jadwal sosialisasi ini. Harap datang 15 menit sebelum acara dimulai."
-            );
-        }
-
-        // Logic Modal UI
-        const modal = document.getElementById('successModal');
-        const mTitle = document.getElementById('modalTitle');
-        const mText = document.getElementById('modalText');
-        const mContent = document.getElementById('modalContent');
-
-        function showModal(title, text) {
-            mTitle.innerText = title;
-            mText.innerText = text;
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-            // Animate in
-            setTimeout(() => {
-                mContent.classList.remove('scale-95');
-                mContent.classList.add('scale-100');
-            }, 50);
-        }
-
-        function closeModal() {
-            mContent.classList.remove('scale-100');
-            mContent.classList.add('scale-95');
-            setTimeout(() => {
-                modal.classList.add('hidden');
-                modal.classList.remove('flex');
-            }, 200);
-        }
-
-        // Mobile Menu Toggle (Simple logic)
-        document.querySelector('button.md\\:hidden').addEventListener('click', function() {
-            const menu = document.querySelector('.md\\:flex');
-            if(menu.classList.contains('hidden')) {
-                menu.classList.remove('hidden');
-                menu.classList.add('flex', 'flex-col', 'absolute', 'top-16', 'left-0', 'w-full', 'bg-white', 'p-4', 'shadow-md', 'gap-4');
-            } else {
-                menu.classList.add('hidden');
-                menu.classList.remove('flex', 'flex-col', 'absolute', 'top-16', 'left-0', 'w-full', 'bg-white', 'p-4', 'shadow-md', 'gap-4');
+        // Sound Synthesis (Simulated Oud / Arabic Bamboo Flute)
+        function initAudio() {
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
             }
-        });
+        }
+
+        function playArabicMelody() {
+            initAudio();
+            if (audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+
+            filterNode = audioCtx.createBiquadFilter();
+            filterNode.type = 'lowpass';
+            filterNode.frequency.value = 800;
+
+            gainNode = audioCtx.createGain();
+            gainNode.gain.setValueAtTime(0.08, audioCtx.currentTime);
+
+            filterNode.connect(gainNode);
+            gainNode.connect(audioCtx.destination);
+
+            // Simple Arabic Pentatonic Scale (Hijaz-like flavor)
+            // C4 (261.63), Db4 (277.18), E4 (329.63), F4 (349.23), G4 (392.00)
+            const melody = [261.63, 277.18, 329.63, 349.23, 392.00, 349.23, 329.63, 277.18];
+            let noteIndex = 0;
+
+            intervalId = setInterval(() => {
+                if (!isMusicPlaying) return;
+                
+                let osc = audioCtx.createOscillator();
+                let noteGain = audioCtx.createGain();
+                
+                osc.type = 'triangle';
+                osc.frequency.setValueAtTime(melody[noteIndex], audioCtx.currentTime);
+                
+                // Slow attack and decay for Arabic flute ambient feel
+                noteGain.gain.setValueAtTime(0, audioCtx.currentTime);
+                noteGain.gain.linearRampToValueAtTime(0.12, audioCtx.currentTime + 0.5);
+                noteGain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 1.8);
+                
+                osc.connect(noteGain);
+                noteGain.connect(filterNode);
+                
+                osc.start(audioCtx.currentTime);
+                osc.stop(audioCtx.currentTime + 2.0);
+                
+                noteIndex = (noteIndex + 1) % melody.length;
+            }, 1800);
+        }
+
+        // Play individual flute note for game/video interaction
+        function playAudioFluteNote(freq, volume, duration) {
+            initAudio();
+            if (audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+            let osc = audioCtx.createOscillator();
+            let noteGain = audioCtx.createGain();
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+            noteGain.gain.setValueAtTime(0, audioCtx.currentTime);
+            noteGain.gain.linearRampToValueAtTime(volume, audioCtx.currentTime + 0.1);
+            noteGain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
+            osc.connect(noteGain);
+            noteGain.connect(audioCtx.destination);
+            osc.start(audioCtx.currentTime);
+            osc.stop(audioCtx.currentTime + duration + 0.1);
+        }
+
+        function toggleInstrumental() {
+            const btn = document.getElementById('btn-music');
+            const icon = document.getElementById('music-icon');
+            const status = document.getElementById('music-status');
+
+            if (!isMusicPlaying) {
+                isMusicPlaying = true;
+                icon.className = 'fa-solid fa-pause';
+                status.innerText = 'Memutar...';
+                playArabicMelody();
+                showCustomMessage("Musik Aktif", "Menikmati instrumen islami lembut.", "success");
+            } else {
+                isMusicPlaying = false;
+                icon.className = 'fa-solid fa-play';
+                status.innerText = 'Muted';
+                if (intervalId) {
+                    clearInterval(intervalId);
+                }
+                showCustomMessage("Musik Berhenti", "Suara dinonaktifkan.", "info");
+            }
+        }
+
+        // Theme Toggle (Dark & Light Mode)
+        function toggleTheme() {
+            const html = document.documentElement;
+            const isDark = html.classList.contains('dark');
+            const themeIcons = [document.getElementById('theme-icon'), document.getElementById('theme-icon-mob')];
+            
+            if (isDark) {
+                html.classList.remove('dark');
+                themeIcons.forEach(i => i.className = 'fa-solid fa-moon text-lg');
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.classList.add('dark');
+                themeIcons.forEach(i => i.className = 'fa-solid fa-sun text-lg text-amber-400 animate-spin-slow');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Admin Panel Sidebar Toggle
+        function toggleAdminPanel() {
+            const panel = document.getElementById('admin-panel');
+            panel.classList.toggle('translate-x-full');
+        }
+
+        // Countdown to Idul Adha 1447 H (May 27, 2026)
+        function startCountdown() {
+            // Target Date: May 27, 2026 00:00:00 UTC+7
+            const targetDate = new Date('May 27, 2026 00:00:00').getTime();
+            
+            setInterval(() => {
+                const now = new Date().getTime();
+                const difference = targetDate - now;
+                
+                if (difference <= 0) {
+                    document.getElementById('cd-days').innerText = '00';
+                    document.getElementById('cd-hours').innerText = '00';
+                    document.getElementById('cd-minutes').innerText = '00';
+                    document.getElementById('cd-seconds').innerText = '00';
+                    return;
+                }
+                
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+                
+                document.getElementById('cd-days').innerText = String(days).padStart(2, '0');
+                document.getElementById('cd-hours').innerText = String(hours).padStart(2, '0');
+                document.getElementById('cd-minutes').innerText = String(minutes).padStart(2, '0');
+                document.getElementById('cd-seconds').innerText = String(seconds).padStart(2, '0');
+            }, 1000);
+        }
+
+        // Interactive Checklist (Ciri Pengguna)
+        function calculateRisk() {
+            const checkboxes = document.querySelectorAll('.risk-checkbox');
+            let checkedScore = 0;
+            checkboxes.forEach(chk => {
+                if (chk.checked) {
+                    checkedScore += parseInt(chk.value);
+                }
+            });
+            
+            const badge = document.getElementById('risk-badge');
+            if (checkedScore === 0) {
+                badge.innerText = 'Nihil';
+                badge.className = 'font-extrabold text-sm uppercase text-emerald-600 dark:text-emerald-400';
+                showCustomMessage("Analisis Berhasil", "Lingkungan Anda terindikasi sangat aman.", "success");
+            } else if (checkedScore >= 1 && checkedScore <= 3) {
+                badge.innerText = 'Rendah';
+                badge.className = 'font-extrabold text-sm uppercase text-amber-500';
+                showCustomMessage("Tingkat Waspada", "Perlu meningkatkan komunikasi kekeluargaan.", "info");
+            } else {
+                badge.innerText = 'TINGGI';
+                badge.className = 'font-extrabold text-sm uppercase text-red-500 animate-pulse';
+                showCustomMessage("PERINGATAN BAHAYA", "Tanda bahaya terdeteksi! Hubungi BNN segera untuk bantuan rahasia.", "error");
+            }
+        }
+
+        function resetRiskChecklist() {
+            const checkboxes = document.querySelectorAll('.risk-checkbox');
+            checkboxes.forEach(chk => chk.checked = false);
+            calculateRisk();
+        }
+
+        // Educational Slider (Ciri Pengguna)
+        let currentSlide = 0;
+        const slides = [
+            {
+                tag: 'Tahap 1: Coba-coba',
+                title: 'Kumpul-kumpul Kurang Sehat',
+                desc: 'Awalnya hanya ingin diterima di pergaulan kelompok bermain atau ikut tren liburan.'
+            },
+            {
+                tag: 'Tahap 2: Penggunaan Sosial',
+                title: 'Memakai Saat Acara Khusus',
+                desc: 'Mulai menggunakan zat tertentu pada malam takbiran atau nongkrong malam demi kelihatan keren.'
+            },
+            {
+                tag: 'Tahap 3: Penyalahgunaan',
+                title: 'Ketergantungan Psikologis',
+                desc: 'Mulai membeli narkoba secara mandiri dan menarik diri dari pergaulan keluarga sehat.'
+            },
+            {
+                tag: 'Tahap 4: Adiksi Kronis',
+                title: 'Kerusakan Mental & Fisik Total',
+                desc: 'Otak sudah rusak sepenuhnya. Berani melakukan kriminalitas, pencurian, hingga risiko overdosis fatal.'
+            }
+        ];
+
+        function updateSlide() {
+            const content = document.getElementById('slider-content');
+            const indicator = document.getElementById('slider-indicator');
+            const s = slides[currentSlide];
+            
+            content.style.opacity = '0';
+            setTimeout(() => {
+                content.innerHTML = `
+                    <span class="text-[10px] bg-amber-500/20 text-amber-400 border border-amber-500/30 px-2 py-0.5 rounded-full uppercase tracking-wider font-extrabold">${s.tag}</span>
+                    <h4 class="font-bold text-base mt-2">${s.title}</h4>
+                    <p class="text-xs text-slate-300">${s.desc}</p>
+                `;
+                content.style.opacity = '1';
+                indicator.innerText = `${currentSlide + 1} / ${slides.length}`;
+            }, 150);
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateSlide();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateSlide();
+        }
+
+        // Interactive Comments & Articles Storage Configuration
+        let defaultArticles = [
+            {
+                id: 1,
+                category: 'bahaya',
+                title: 'Cara Ampuh Menolak Ajakan Narkoba Saat Liburan',
+                summary: 'Langkah taktis bagi generasi muda menghadapi tekanan teman sebaya (peer pressure) pada liburan panjang.',
+                date: '19 Mei 2026',
+                comments: [
+                    { name: 'Rian S.', text: 'Sangat bermanfaat, tips menolaknya sopan tapi tegas!' }
+                ]
+            },
+            {
+                id: 2,
+                category: 'sosial',
+                title: 'Membangun Benteng Pertahanan Keluarga Sehat',
+                summary: 'Tips mendeteksi dini perubahan perilaku anak agar terhindar dari lingkaran setan penyalahgunaan narkotika.',
+                date: '18 Mei 2026',
+                comments: []
+            },
+            {
+                id: 3,
+                category: 'motivasi',
+                title: 'Sehat Jasmani Rohani Menyambut Idul Adha',
+                summary: 'Kunci ketenangan jiwa, mendekatkan diri kepada sang pencipta untuk mendapatkan kehidupan berkah bebas adiksi.',
+                date: '17 Mei 2026',
+                comments: []
+            }
+        ];
+
+        let articles = JSON.parse(localStorage.getItem('portal_articles')) || defaultArticles;
+
+        function renderArticles() {
+            const container = document.getElementById('articles-container');
+            container.innerHTML = '';
+            
+            articles.forEach(art => {
+                container.innerHTML += `
+                    <article class="art-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 shadow-sm flex flex-col justify-between" data-category="${art.category}">
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 px-2.5 py-1 rounded-full font-bold uppercase tracking-wider">${art.category}</span>
+                                <span class="text-xs text-slate-400">${art.date}</span>
+                            </div>
+                            <h3 class="text-lg font-bold hover:text-emerald-500 transition cursor-pointer">${art.title}</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">${art.summary}</p>
+                        </div>
+
+                        <!-- Comments Section inside Article Card -->
+                        <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 space-y-4">
+                            <h4 class="font-bold text-xs text-slate-600 dark:text-slate-300">Diskusi Publik (${art.comments.length})</h4>
+                            <div class="space-y-2 max-h-[120px] overflow-y-auto pr-1">
+                                ${art.comments.map(c => `
+                                    <div class="bg-slate-50 dark:bg-slate-950 p-2.5 rounded-xl text-[11px] border border-slate-100 dark:border-slate-800">
+                                        <span class="font-bold text-emerald-600 dark:text-emerald-400">${c.name}:</span>
+                                        <span class="text-slate-600 dark:text-slate-300">${c.text}</span>
+                                    </div>
+                                `).join('')}
+                            </div>
+                            <!-- Comment form -->
+                            <div class="flex gap-1">
+                                <input type="text" id="com-name-${art.id}" placeholder="Nama..." class="w-1/3 px-2 py-1.5 rounded-lg border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-[10px] focus:outline-none">
+                                <input type="text" id="com-text-${art.id}" placeholder="Komentar..." class="w-2/3 px-2 py-1.5 rounded-lg border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-[10px] focus:outline-none">
+                                <button onclick="postComment(${art.id})" class="px-2.5 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg text-xs font-bold">Kirim</button>
+                            </div>
+                        </div>
+                    </article>
+                `;
+            });
+        }
+
+        function postComment(artId) {
+            const nameInput = document.getElementById(`com-name-${artId}`);
+            const textInput = document.getElementById(`com-text-${artId}`);
+            const name = nameInput.value.trim() || 'Anonim';
+            const text = textInput.value.trim();
+            
+            if (!text) {
+                showCustomMessage("Gagal", "Komentar tidak boleh kosong.", "error");
+                return;
+            }
+            
+            const artIndex = articles.findIndex(a => a.id === artId);
+            if (artIndex !== -1) {
+                articles[artIndex].comments.push({ name, text });
+                localStorage.setItem('portal_articles', JSON.stringify(articles));
+                renderArticles();
+                nameInput.value = '';
+                textInput.value = '';
+                showCustomMessage("Komentar Dikirim", "Kontribusi diskusi Anda berhasil diterbitkan.", "success");
+            }
+        }
+
+        // Search and Category Filters
+        let activeCategory = 'all';
+        function filterArticles() {
+            const query = document.getElementById('article-search').value.toLowerCase();
+            const cards = document.querySelectorAll('.art-card');
+            
+            cards.forEach(card => {
+                const title = card.querySelector('h3').innerText.toLowerCase();
+                const category = card.getAttribute('data-category');
+                const matchesSearch = title.includes(query);
+                const matchesCategory = activeCategory === 'all' || category === activeCategory;
+                
+                if (matchesSearch && matchesCategory) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        }
+
+        function filterCategory(cat) {
+            activeCategory = cat;
+            
+            // Highlight active button
+            const buttons = document.querySelectorAll('.cat-btn');
+            buttons.forEach(btn => {
+                btn.className = 'cat-btn px-4 py-1.5 rounded-full text-xs font-bold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition';
+            });
+            event.target.className = 'cat-btn px-4 py-1.5 rounded-full text-xs font-bold bg-emerald-600 text-white transition';
+            
+            filterArticles();
+        }
+
+        // Anonymous Reports Inbox Setup
+        let defaultReports = [
+            {
+                id: 1,
+                name: 'Saksi Rahasia',
+                category: 'Transaksi',
+                detail: 'Dicurigai sering terjadi transaksi obat mencurigakan di gang belakang pemukiman RW 04 setiap malam takbiran menjelang pukul 23.00.',
+                status: 'Investigasi',
+                date: '19 Mei 2026',
+                img: null
+            }
+        ];
+
+        let reports = JSON.parse(localStorage.getItem('portal_reports')) || defaultReports;
+
+        function renderReportsInbox() {
+            const inbox = document.getElementById('inbox-container');
+            const countBadge = document.getElementById('report-count-badge');
+            
+            countBadge.innerText = reports.length;
+            
+            if (reports.length === 0) {
+                inbox.innerHTML = '<p class="text-slate-400 text-center py-4">Belum ada laporan masuk.</p>';
+                return;
+            }
+            
+            inbox.innerHTML = '';
+            reports.forEach(rep => {
+                inbox.innerHTML += `
+                    <div class="bg-white dark:bg-slate-950 p-3 rounded-xl border border-slate-200 dark:border-slate-800 space-y-2 relative">
+                        <div class="flex items-center justify-between">
+                            <span class="font-extrabold text-[10px] uppercase text-emerald-600">${rep.name}</span>
+                            <span class="text-[9px] bg-amber-500/20 text-amber-500 px-2 py-0.5 rounded">${rep.status}</span>
+                        </div>
+                        <p class="text-[11px] text-slate-600 dark:text-slate-300 leading-snug">${rep.detail}</p>
+                        ${rep.img ? `<img src="${rep.img}" class="h-12 w-12 object-cover rounded mt-1 border border-slate-200">` : ''}
+                        <div class="flex justify-between items-center pt-1 border-t border-slate-100 dark:border-slate-800 text-[10px]">
+                            <span class="text-slate-400">${rep.date}</span>
+                            <div class="flex gap-1.5">
+                                <button onclick="updateReportStatus(${rep.id})" class="text-blue-500 hover:underline">Ubah Status</button>
+                                <button onclick="deleteReport(${rep.id})" class="text-red-500 hover:underline">Hapus</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        // Submit Anonymous Report Action
+        let uploadedImageBase64 = null;
+
+        function previewUploadImage(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                uploadedImageBase64 = event.target.result;
+                document.getElementById('upload-prompt').classList.add('hidden');
+                document.getElementById('upload-preview-container').classList.remove('hidden');
+                document.getElementById('upload-preview-img').src = uploadedImageBase64;
+                document.getElementById('upload-filename').innerText = file.name;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function clearUploadImage(e) {
+            e.stopPropagation();
+            uploadedImageBase64 = null;
+            document.getElementById('report-file').value = '';
+            document.getElementById('upload-prompt').classList.remove('hidden');
+            document.getElementById('upload-preview-container').classList.add('hidden');
+        }
+
+        function submitAnonymousReport(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('report-name').value.trim() || 'Anonim';
+            const category = document.getElementById('report-category').value;
+            const detail = document.getElementById('report-detail').value.trim();
+            const consent = document.getElementById('report-consent').checked;
+            
+            if (!detail || !consent) {
+                showCustomMessage("Peringatan", "Lengkapi detail serta centang persetujuan kerahasiaan.", "error");
+                return;
+            }
+            
+            const newRep = {
+                id: Date.now(),
+                name,
+                category,
+                detail,
+                status: 'Baru',
+                date: '19 Mei 2026',
+                img: uploadedImageBase64
+            };
+            
+            reports.push(newRep);
+            localStorage.setItem('portal_reports', JSON.stringify(reports));
+            
+            // Reset Form Fields
+            document.getElementById('report-form').reset();
+            clearUploadImage({ stopPropagation: () => {} });
+            
+            // Render Update
+            renderReportsInbox();
+            
+            showCustomMessage("Laporan Dikirim", "Terima kasih, laporan Anda telah diterima secara anonim & rahasia.", "success");
+        }
+
+        function updateReportStatus(id) {
+            const idx = reports.findIndex(r => r.id === id);
+            if (idx !== -1) {
+                const statuses = ['Baru', 'Investigasi', 'Selesai'];
+                const currentStatusIdx = statuses.indexOf(reports[idx].status);
+                reports[idx].status = statuses[(currentStatusIdx + 1) % statuses.length];
+                
+                localStorage.setItem('portal_reports', JSON.stringify(reports));
+                renderReportsInbox();
+                showCustomMessage("Status Diubah", `Status laporan berganti ke ${reports[idx].status}`, "info");
+            }
+        }
+
+        function deleteReport(id) {
+            reports = reports.filter(r => r.id !== id);
+            localStorage.setItem('portal_reports', JSON.stringify(reports));
+            renderReportsInbox();
+            showCustomMessage("Dihapus", "Laporan berhasil dihapus dari Inbox.", "info");
+        }
+
+        // Live Chat Simulation (Virtual Assistant)
+        function sendChatMessage() {
+            const input = document.getElementById('chat-input');
+            const text = input.value.trim();
+            if (!text) return;
+
+            const thread = document.getElementById('chat-thread');
+            
+            // Append User Message
+            thread.innerHTML += `
+                <div class="flex gap-2 justify-end">
+                    <div class="bg-emerald-600 text-white p-3 rounded-2xl rounded-tr-none max-w-[85%]">
+                        ${text}
+                    </div>
+                </div>
+            `;
+            
+            input.value = '';
+            thread.scrollTop = thread.scrollHeight;
+            
+            // Play a warm click sound synth
+            playAudioFluteNote(523.25, 0.05, 0.15);
+
+            // Mock automated responding counselor with high value
+            setTimeout(() => {
+                let responseText = "Terima kasih atas pertanyaan Anda. Kami menjamin kerahasiaan data 100%. Untuk layanan konsultasi pemulihan lebih mendalam, Anda dapat menghubungi konselor rehabilitasi profesional kami di Hotline 184.";
+                const lowerText = text.toLowerCase();
+                
+                if (lowerText.includes('ganja') || lowerText.includes('sabu') || lowerText.includes('obat')) {
+                    responseText = "Penyalahgunaan zat tersebut sangat membahayakan fisik dan mental. Tahapan rehabilitasi rawat jalan/rawat inap di BNN Lido disediakan tanpa pungutan biaya bagi pelapor sukarela.";
+                } else if (lowerText.includes('ciri') || lowerText.includes('anak') || lowerText.includes('keluarga')) {
+                    responseText = "Perubahan perilaku tiba-tiba seperti menyendiri dan mudah emosional adalah indikator awal adiksi. Cobalah berkomunikasi persuasif dari hati ke hati, hindari konfrontasi langsung.";
+                } else if (lowerText.includes('lapor') || lowerText.includes('polisi') || lowerText.includes('aman')) {
+                    responseText = "Form Laporan Anonim kami terhubung langsung secara terenkripsi. Anda tidak perlu khawatir, BNN RI menjamin perlindungan hukum penuh untuk saksi pelapor.";
+                }
+
+                thread.innerHTML += `
+                    <div class="flex gap-2">
+                        <div class="bg-white/10 p-3 rounded-2xl rounded-tl-none max-w-[85%] text-slate-100">
+                            ${responseText}
+                        </div>
+                    </div>
+                `;
+                thread.scrollTop = thread.scrollHeight;
+                playAudioFluteNote(587.33, 0.05, 0.25);
+            }, 1000);
+        }
+
+        function handleChatKey(e) {
+            if (e.key === 'Enter') {
+                sendChatMessage();
+            }
+        }
+
+        // Save General Settings from Admin Dashboard (Banner text)
+        function saveGeneralSettings() {
+            const titleInput = document.getElementById('input-banner-title').value.trim();
+            const quoteInput = document.getElementById('input-banner-quote').value.trim();
+            
+            if (!titleInput || !quoteInput) {
+                showCustomMessage("Gagal", "Form pengaturan tidak boleh kosong.", "error");
+                return;
+            }
+
+            document.getElementById('banner-title').innerText = titleInput;
+            document.getElementById('banner-quote').innerText = quoteInput;
+
+            localStorage.setItem('banner_title', titleInput);
+            localStorage.setItem('banner_quote', quoteInput);
+            
+            showCustomMessage("Pengaturan Disimpan", "Banner beranda berhasil diubah real-time!", "success");
+        }
+
+        function createNewArticle() {
+            const title = document.getElementById('input-art-title').value.trim();
+            const category = document.getElementById('input-art-category').value;
+            const summary = document.getElementById('input-art-summary').value.trim();
+            
+            if (!title || !summary) {
+                showCustomMessage("Form Kosong", "Isi judul dan summary artikel.", "error");
+                return;
+            }
+            
+            const newArt = {
+                id: Date.now(),
+                category,
+                title,
+                summary,
+                date: '19 Mei 2026',
+                comments: []
+            };
+            
+            articles.push(newArt);
+            localStorage.setItem('portal_articles', JSON.stringify(articles));
+            
+            renderArticles();
+            
+            document.getElementById('input-art-title').value = '';
+            document.getElementById('input-art-summary').value = '';
+            
+            showCustomMessage("Artikel Ditambahkan", "Artikel baru berhasil diterbitkan secara publik.", "success");
+        }
+
+        function resetAdminStorage() {
+            localStorage.removeItem('portal_articles');
+            localStorage.removeItem('portal_reports');
+            localStorage.removeItem('banner_title');
+            localStorage.removeItem('banner_quote');
+            
+            articles = defaultArticles;
+            reports = defaultReports;
+            
+            document.getElementById('banner-title').innerText = "Rayakan Hari Raya dengan Hati Bersih & Hidup Sehat Tanpa Narkoba!";
+            document.getElementById('banner-quote').innerText = '"Hari Raya Idul Adha 1447 H - Jauhi Narkoba, Dekatkan Diri Kepada Keluarga"';
+            
+            renderArticles();
+            renderReportsInbox();
+            showCustomMessage("Reset Berhasil", "Sistem dikembalikan ke setelan pabrik.", "info");
+        }
+
+        // Custom feedback message (replaces alert & confirm)
+        function showCustomMessage(title, desc, type) {
+            const box = document.getElementById('message-box');
+            const t = document.getElementById('msg-title');
+            const d = document.getElementById('msg-desc');
+            const iconContainer = document.getElementById('msg-icon-container');
+            
+            t.innerText = title;
+            d.innerText = desc;
+            
+            if (type === 'success') {
+                iconContainer.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+                iconContainer.className = 'w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center text-white';
+            } else if (type === 'error') {
+                iconContainer.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i>';
+                iconContainer.className = 'w-8 h-8 rounded-full bg-red-500 flex items-center justify-center text-white';
+            } else {
+                iconContainer.innerHTML = '<i class="fa-solid fa-circle-info"></i>';
+                iconContainer.className = 'w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white';
+            }
+            
+            box.className = 'fixed bottom-6 right-6 z-50 transform translate-y-0 opacity-100 transition-all duration-300 max-w-sm w-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-5 py-4 rounded-2xl shadow-2xl border border-slate-800 flex items-center gap-3';
+            
+            setTimeout(() => {
+                box.className = 'fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 max-w-sm w-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-5 py-4 rounded-2xl shadow-2xl border border-slate-800 flex items-center gap-3';
+            }, 4000);
+        }
+
+        // Lightbox Functions
+        function openLightbox(title, desc) {
+            document.getElementById('lightbox-title').innerText = title;
+            document.getElementById('lightbox-description').innerText = desc;
+            document.getElementById('lightbox-modal').classList.remove('hidden');
+        }
+
+        function closeLightboxModal() {
+            document.getElementById('lightbox-modal').classList.add('hidden');
+        }
+
+        // Video Popup Functions
+        function openVideoPopup() {
+            document.getElementById('video-modal').classList.remove('hidden');
+        }
+
+        function closeVideoModal() {
+            document.getElementById('video-modal').classList.add('hidden');
+        }
+
+        // Window Initialization
+        window.onload = function() {
+            // Load saved settings if any
+            const savedTitle = localStorage.getItem('banner_title');
+            const savedQuote = localStorage.getItem('banner_quote');
+            if (savedTitle) document.getElementById('banner-title').innerText = savedTitle;
+            if (savedQuote) document.getElementById('banner-quote').innerText = savedQuote;
+
+            // Render articles & reports list
+            renderArticles();
+            renderReportsInbox();
+
+            // Set default theme from localStorage
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+
+            // Start Live Clock Countdown
+            startCountdown();
+
+            // Remove loading screen elegantly
+            setTimeout(() => {
+                const loader = document.getElementById('loading-screen');
+                loader.classList.add('opacity-0');
+                setTimeout(() => loader.style.display = 'none', 700);
+            }, 1200);
+        };
     </script>
 </body>
 </html>
